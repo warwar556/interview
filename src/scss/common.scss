@@ -63,8 +63,200 @@ body {
 	}
 }
 
+.input-reserve {
+	width: 656px;
+	height: 50px;
+	padding: 16px 24px;
+	background: $gray-2;
+	border: 2px solid $gray-4;
+	box-sizing: border-box;
+	border-radius: 15px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+	color: $gray;
+
+	@media (max-width: 1439px) {
+		width: 280px;
+		font-size: 14px;
+		line-height: 18px;
+	}
+}
 
 
+//.slider {
+
+//	&__inner {
+
+//	}
+
+//	&__slide {
+
+//		&-image {
+
+//		}
+//	}
+
+//	&__slide-image {
+//	}
+
+//	&__button {
+
+//		&-prev {
+			 
+//		}
+
+//		&-next {
+			
+//		}
+//	}
+//}
+
+
+
+
+//Блок баннер//
+.banner {
+	width: 1440px;
+	height: 969px;
+	background: linear-gradient(180deg, #020725 0%, rgba(32, 41, 98, 0) 16.46%, rgba(241, 241, 252, 0) 68.84%, rgba(241, 241, 252, 0.28) 83.85%, #F1F1FC 100%), url(../images/content/banner.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	@media (max-width: 1439px) {
+		width: 100%;
+		height: 527px;
+		background-size: cover;
+		background: linear-gradient(180deg, #020725 0%, rgba(32, 41, 98, 0.42) 60.94%, rgba(0, 0, 0, 0.29) 68.84%, rgba(241, 241, 252, 0.28) 83.85%, #F1F1FC 100%), url(../images/content/banner-m.png);
+	}
+
+	&__title {
+		text-align: center;
+		padding-top: 305px;
+
+		@media (max-width: 1439px) {
+			padding-top: 140px;
+			text-align: center;
+		}
+	}
+}
+//Блок баннер//
+
+
+
+
+
+//Блок Что взять с собой://
+.take {
+	padding: 78px 165px 99px;
+	background: $gray-2;
+
+	&__title {
+		padding-bottom: 32px;
+	}
+
+	&__drop {
+		padding: 5px 27px;
+		border-top:1px solid $gray-4;
+
+		&:last-of-type {
+			border-bottom:1px solid $gray-4;
+		}
+
+		&-title {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&-btn {
+			width: 40px;
+			height: 40px;
+			border-radius: 50px;
+			background-color: $gray-5;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			&-cross {
+				width: 25px;
+				min-width: 25px;
+				height: 25px;
+
+				&:before {
+					//-webkit-transform: rotate(45deg);
+					//transform: rotate(45deg);
+				}
+				
+
+				&:hover {
+					//background-color: #bad0b8;
+					//background-image: -webkit-linear-gradient(right, #FC7864, #FDA366);
+					//background-image: -moz-linear-gradient(right, #FC7864, #FDA366);
+					//background-image: -o-linear-gradient(right, #FC7864, #FDA366);
+					//background-image: -ms-linear-gradient(right, #FC7864, #FDA366);
+					//background-image: linear-gradient(right, #FC7864, #FDA366);
+				}
+			}
+		}
+
+		&-text {
+			width: 893px;
+			padding-bottom: 12px;
+			display: none;
+		}
+	}
+}
+//Блок Что взять с собой://
+
+
+
+
+
+//Блок Бронируйте ваш тур мечты//
+.reserve {
+	background: linear-gradient(180deg, #F1F1FC 0%, rgba(0, 0, 0, 0.510417) 48.96%, #F1F1FC 100%), url(../images/content/reserve-bg.png);
+	width: 1440px;
+	height: 567px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@media (max-width: 1439px) {
+		background: linear-gradient(180deg, #F1F1FC 0%, rgba(0, 0, 0, 0.510417) 48.96%, #F1F1FC 100%), url(../images/content/reserve-bg-m.png);
+		width: 100%;
+		height: 555px;
+		padding: 0 20px;
+	}
+	
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__title {
+		padding-bottom: 35px;
+
+		@media (max-width: 1439px) {
+			text-align: center;
+		}
+	}
+
+	&__input {
+		padding-bottom: 10px;
+		
+		&:last-of-type {
+			padding-bottom: 25px;
+		}
+	}
+}
+//Блок Бронируйте ваш тур мечты//
 
 
 //Блок Стоимость тура//
