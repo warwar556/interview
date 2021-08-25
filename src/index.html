@@ -3,149 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
     <title>project</title>
 </head>
 <body>
     <div class="wrapper">
+        <header>
+        </header>
+
         <main>
-            <section class="section">
+            <!--<section class="section">
                 <div class="section__content">
                     <div class="container">
-                        <h1 class="text-b text-b_h1">FTL: Прямая машина</h1>
-                        <div class="container__inner">
-                            <div class="calc">
-                                <div class="calc__step">
-                                    <div class="calc__step-number"><span class="text-b text-b_p">1</span></div>
-                                    <p class="text-b">Маршрут</p>
-                                </div>
-                                <div class="form-container">
-                                    <label class="text">Откуда</label>
-                                    <input class="form" type="text" placeholder="">
-                                </div>
-                                <div class="form-container">
-                                    <label class="text form-indent">Куда</label>
-                                    <input class="form" type="text" placeholder="">
-                                </div>
-                                <div class="calc__step">
-                                    <div class="calc__step-number"><span class="text-b text-b_p">2</span></div>
-                                    <p class="text-b">Транспорт</p>
-                                </div>
-                                <div class="form-group">
-                                    <div class="dropdown-container">
-                                        <label class="text">Грузоподъёмность</label>
-                                        <div class="dropdown">
-                                            <button class="dropdown__button"><span class="text text_input-disabled dropdown__button-inner dropdown__button-js">Не выбрана</span></button>
-                                            <ul class="dropdown__list">
-                                                    <li class="dropdown__list-item text text_input">Вариант 1</li>
-                                                    <li class="dropdown__list-item text text_input">Вариант 2</li>
-                                                    <li class="dropdown__list-item text text_input">Вариант 3</li>
-                                                    <li class="dropdown__list-item text text_input">Вариант 4</li>
-                                                    <li class="dropdown__list-item text text_input">Вариант 5</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="form-container form-container_width-small">
-                                        <label class="text">Способ погрузки</label>
-                                        <div class="dropdown">
-                                            <button class="dropdown__button"><span class="text text_input dropdown__button-inner dropdown__button-js">Задняя</span></button>
-                                            <ul class="dropdown__list">
-                                                <li class="dropdown__list-item text text_input">Задняя</li>
-                                                <li class="dropdown__list-item text text_input">Полная</li>
-                                                <li class="dropdown__list-item text text_input">Вариант 2</li>
-                                                <li class="dropdown__list-item text text_input">Вариант 3</li>
-                                                <li class="dropdown__list-item text text_input">Вариант 4</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="calc__step">
-                                    <div class="calc__step-number"><span class="text-b text-b_p">3</span></div>
-                                    <p class="text-b">Груз</p>
-                                </div>
-                                <div class="form-grouping">
-                                    <div class="form-group">
-                                        <div class="form-container form-container_width-100">
-                                            <label class="text">Тип груза</label>
-                                            <div class="dropdown">
-                                                <button class="dropdown__button"><span class="text text_input-disabled dropdown__button-inner dropdown__button-js">Не выбран</span></button>
-                                                <ul class="dropdown__list">
-                                                    <li class="dropdown__list-item text text_input">Вариант 6</li>
-                                                    <li class="dropdown__list-item text text_input">Вариант 7</li>
-                                                    <li class="dropdown__list-item text text_input">Вариант 8</li>
-                                                    <li class="dropdown__list-item text text_input">Вариант 9</li>
-                                                    <li class="dropdown__list-item text text_input">Вариант 10</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="dropdown-container dropdown-container_hide">
-                                            <label class="text">Класс опасности</label>
-                                            <div class="dropdown">
-                                                <button class="dropdown__button"><span class="text text_input dropdown__button-inner dropdown__button-js">Класс 5 - вариант 2</span></button>
-                                                <ul class="dropdown__list">
-                                                        <li class="dropdown__list-item text text_input">Класс 5 - вариант 2</li>
-                                                        <li class="dropdown__list-item text text_input">Класс 4 - вариант 2</li>
-                                                        <li class="dropdown__list-item text text_input">Класс 3 - вариант 2</li>
-                                                        <li class="dropdown__list-item text text_input">Класс 2 - вариант 3</li>
-                                                        <li class="dropdown__list-item text text_input">Класс 1 - вариант 4</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="form-container">
-                                            <label class="text">Объявленная ценность, ₽</label>
-                                            <input class="form form_small" type="text" placeholder="≥ 1">
-                                        </div>
-                                    </div>
-                                </div>
-                                <input class="checkbox-js" type="checkbox" name="temperature" id="check-box">
-                                <label for="check-box" class="label text">Требуется температурный режим</label>
-                                <div class="form-group form-group_none-js">
-                                    <div class="form-container">
-                                        <label class="text">От, °C</label>
-                                        <input class="form form_small" type="text" placeholder="-20">
-                                    </div>
-                                    <div class="form-container">
-                                        <label class="text">До, °C</label>
-                                        <input class="form form_small" type="text" placeholder="+20">
-                                    </div>
-                                </div>
-                                <div class="calc__step">
-                                    <div class="calc__step-number"><span class="text-b text-b_p">4</span></div>
-                                    <p class="text-b">Время</p>
-                                </div>
-                                <div class="points">
-                                    <div class="points__title">
-                                        <p class="text">Когда прибыть на точку</p>
-                                        <p class="text">700 км в день</p>
-                                    </div>
-                                    <div class="point">
-                                        <div class="point__container">
-                                            <div class="point__item"></div>
-                                            <p class="text text_p-1">Длинный адрес с градиентом</p>
-                                        </div>
-                                        <button class="button">НЕ ВЫБРАНО</button>
-                                    </div>
-                                    <div class="point">
-                                        <div class="point__container">
-                                            <div class="point__item point__item_white"></div>
-                                            <p class="text text_p-1">Адрес не указан</p>
-                                        </div>
-                                        <button class="button button_disable">НЕ ВЫБРАНО</button>
-                                    </div>
-                                </div>
-                                <p class="text">Комментарий к заказу</p>
-                                <textarea class="textarea" name="" placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+
+                    </div>
+                </div>
+            </section>-->
+
+
+
+        </main>
+        <footer>
+            <section class="footer">
+                <div class="footer__content">
+                    <div class="footer__inner">
+                        <div class="footer__container">
+
+                            <div class="footer__logo">
+                                <a href="#"><img class="footer__logo-image" src="../images/content/footer/footer-logo.png" alt="footer-logo"></a>
                             </div>
-                            <div class="desc">
-                                <p class="text text_p">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</p>
+
+
+
+                            <div class="footer__nav">
+                                <p class="text text_20-30">МЕНЮ</p>
+                                <a class="text text_16-24_m footer__nav-link" href="#" target="">Экспедиции</a>
+                                <a class="text text_16-24_m" href="#" target="_blank">Контакты</a>
+                            </div>
+                            <div class="footer__contacts">
+                                <div class="footer__contacts-tel">
+                                    <span class="footer__contacts-lang text text_16-24"><a href="#" target="_blank" class="text text_16-24 text_16-24_active">RU</a>|<a href="#" target="_blank" class="text text_16-24">EN</a></span>
+                                    <a class="text text_16-24" href="tel:+7999999999">+7 999 999 99 99</a>  
+                                </div>
+                                <div class="footer__contacts-social">
+                                    <a href="#"><img class="footer__contacts-tg" src="../images/content/footer/footer-tg.svg" alt="footer-tg"></a>
+                                    <a href="#"><img class="footer__contacts-wapp" src="../images/content/footer/footer-wapp.svg" alt="footer-wapp"></a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div class="footer__container-policy">
+                        <a class=" text text_14-21" href="#" target="_blank">Политика конфиденциальности</a>
+                    </div>
                 </div>
             </section>
-        </main>
+        </footer>
     </div>
 </body>
 </html>

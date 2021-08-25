@@ -1,53 +1,110 @@
 
- 
+
+//.text {
+//    font-size: 13px;
+//    line-height: 15px;
+//    font-weight: 400;
+//    font-family: $fontFamily;
+
+//    &_p {
+//        font-size: 15px;
+//        line-height: 18px;
+//    }
+
+//    &_p-1 {
+//        font-size: 15px;
+//        line-height: 19px;
+//    }
+
+//    &_input {
+//        font-size: 14px;
+//        line-height: 17px;
+//        color: $black;
+
+//        &-disabled {
+//            opacity: 0.4;
+//        }
+//    }
+//}
+
+//.text-b {
+//    font-size: 24px;
+//    line-height: 30px;
+//    font-weight: 700;
+//    font-family: $fontFamily-bold;
+
+//    &_h1 {
+//        font-size: 56px;
+//        line-height: 69px;
+
+//        @media (max-width: 768px) {
+//			font-size: 32px;
+//            line-height: 40px;
+//		}
+//    }
+
+//    &_p {
+//        font-size: 16px;
+//        line-height: 20px;
+//    }
+
+//}
+
 .text {
     font-size: 13px;
     line-height: 15px;
-    font-weight: 400;
-    font-family: $fontFamily;
+    font-weight: 500;
+    font-family: $fontFamily-Medium;
 
-    &_p {
-        font-size: 15px;
-        line-height: 18px;
+    &_20-30 {
+        font-size: 20px;
+        line-height: 30px;
+        color: $gray;
+
+        @media (max-width: 1439px) {
+            font-size: 18px;
+            line-height: 27px;
+        }
     }
 
-    &_p-1 {
-        font-size: 15px;
-        line-height: 19px;
+    &_16-24 {
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+
+        &_active {
+            color: $orange;
+        }
     }
 
-    &_input {
+    &_16-24_m {
+        font-size: 16px;
+        line-height: 24px;
+        color: $white;
+
+        @media (max-width: 1439px) {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+
+    &_14-21 {
         font-size: 14px;
-        line-height: 17px;
-        color: $black;
+        line-height: 21px;
+        color: $gray;
 
-        &-disabled {
-            opacity: 0.4;
+        @media (max-width: 1439px) {
+            font-size: 12px;
+            line-height: 18px;
         }
     }
 }
 
-.text-b {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 700;
-    font-family: $fontFamily-bold;
 
-    &_h1 {
-        font-size: 56px;
-        line-height: 69px;
 
-        @media (max-width: 768px) {
-			font-size: 32px;
-            line-height: 40px;
-		}
-    }
-
-    &_p {
-        font-size: 16px;
-        line-height: 20px;
-    }
-
-}
-
- 
+//&_hover {
+//    &:hover {
+//        color: $v3-color-black;
+//        transition: all 0.25s ease-out;
+//    }
+//}
