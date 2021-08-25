@@ -2,7 +2,7 @@
 
 body {
     font-family: $fontFamily-Medium;
-	color: $white;
+	color: $black;
 	font-size: 18px;
 	font-weight: 150%;
 	background-color: $white;
@@ -21,21 +21,396 @@ body {
 	&__content {
 		max-width: $maxWidth;
 		margin: 0px auto;
-		//background-color: rgb(170, 167, 167);
 
-		@media (max-width: 1440px) {
-			 
+		@media (max-width: 1439px) {
+			width: $minWidth;
 		}
 	}
 }
 
-.container {
-	width: 100%;
-    padding: 40px 20px;
-	display: flex;
 
-    @media (max-width: 768px) {
-        padding: 40px 16px 37px;
-    }
+.btn {
+	display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+	max-width: 250px;
+	width: 250px;
+	height: 50px;
+	font-family: $fontFamily-Semibold;
+	font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+	color: $white;
+	background-color: $orange;
+	border-radius: 15px;
+	cursor: pointer;
+	text-decoration: none;
+	transition: 0.25s ease-out;
+	//will-change: contents;
+	border: 2px solid transparent;
+
+	&:hover{
+		background-color: transparent;
+		color: $black;
+		border: 2px solid $orange;
+	}
+
+	@media (max-width: 1439px) {
+		font-size: 16px;
+		line-height: 22px;
+	}
 }
+
+
+
+
+
+//Блок Стоимость тура//
+.tour-cost {
+	padding: 74px 153px 0 165px;
+	background-color: $gray-2;
+
+	@media (max-width: 1439px) {
+		padding: 52px 20px 0;
+	}
+
+	&__title {
+		display: flex;
+		flex-direction: wrap;
+		padding-bottom: 28px;
+
+		@media (max-width: 1439px) {
+			flex-direction: column;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: row;
+
+		@media (max-width: 1439px) {
+			flex-direction: column;
+		}
+	}
+
+	&__container {
+		padding-right: 39px;
+
+		@media (max-width: 1439px) {
+			padding-right: 0;
+
+			&:first-of-type {
+				padding-bottom: 26px;
+			}
+		}
+
+		&-title {
+			padding-bottom: 13px;
+
+			@media (max-width: 1439px) {
+				padding-bottom: 6px;
+			}
+		}
+
+		&-list {
+			width: 315px;
+			margin-left: 25px;
+
+			@media (max-width: 1439px) {
+				width: 100%;
+			}
+		}
+	}
+
+	&__logo {
+		margin-top: 81px;
+		margin-left: 143px;
+
+		@media (max-width: 1439px) {
+			margin-top: 0;
+			margin-left: 209px;
+		}
+
+		&-image {
+			min-width: 219px;
+			width: 219px;
+			height: 250px;
+
+			@media (max-width: 1439px) {
+				min-width: 91px;
+				width: 91px;
+				height: 104px;
+			}
+		}
+	}
+}
+//Блок Стоимость тура//
+
+
+
+//Блок Даты туров//
+.tour-dates {
+	padding: 78px 165px 95px;
+	display: flex;
+	flex-direction: column;
+
+	@media (max-width: 1439px) {
+		padding: 54px 20px 60px;
+	}
+
+	&-title {
+		padding-bottom: 36px;
+
+		@media (max-width: 1439px) {
+			padding-bottom: 23px;
+		}
+	}
+
+	&-container {
+		width: 100%;
+		height: 100px;
+		background-color: $gray-2;
+		border: 2px solid  $gray-3;
+		box-sizing: border-box;
+		border-radius: 15px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 45px;
+
+		@media (max-width: 1439px) {
+			height: 154px;
+			padding: 10px 15px 22px;
+			margin-bottom: 10px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&__title {
+			width: 293px;
+
+			@media (max-width: 1439px) {
+				width: 100%;
+				padding-bottom: 0;
+				display: flex;
+				justify-content: center;
+			}
+		}
+
+		&__date {
+			width: 280px;
+			padding-left: 58px;
+
+			@media (max-width: 1439px) {
+				width: 100%;
+				padding-left: 0;
+				margin-top: -9px;
+				display: flex;
+				justify-content: center;
+			}
+		}
+	}
+}
+//Блок Даты туров//
+
+
+//Блок Связаться с нами://
+.contact {
+	padding: 78px 153px 39px 165px;
+	background-color: $gray-2;
+
+	@media (max-width: 1439px) {
+		padding: 63px 20px 70px;
+	}
+
+	&__title {
+		padding-bottom: 50px;
+
+		@media (max-width: 1439px) {
+			padding-bottom: 27px;
+		}
+	}
+
+	&__persons {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		@media (max-width: 1439px) {
+			flex-direction: column;
+		}
+	}
+
+	&__person {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 553px;
+		padding-bottom: 80px;
+
+		@media (max-width: 1439px) {
+			flex-direction: column;
+			width: 100%;
+			padding-bottom: 38px;
+		}
+
+		&-image {
+			padding-right: 34px;
+
+			@media (max-width: 1439px) {
+				padding-right: 0;
+				padding-bottom: 24px;
+			}
+
+			&-face {
+				width: 190px;
+				min-width: 190px;
+				height: 190px;
+
+				@media (max-width: 1439px) {
+					width: 130px;
+					min-width: 130px;
+					height: 130px;
+				}
+			}
+		}
+
+		&-contacts {
+			display: flex;
+			flex-direction: column;
+
+			@media (max-width: 1439px) {
+				align-items: center;
+			}
+
+			&-name {
+				padding-bottom: 6px;
+
+				@media (max-width: 1439px) {
+					padding-bottom: 4px;
+				}
+			}
+		}
+
+		&-socials {
+			display: flex;
+			flex-direction: row;
+			padding-top: 17px;
+
+			@media (max-width: 1439px) {
+				padding-top: 16px;
+			}
+
+			&-icon {
+
+				&-tg {
+					width: 33px;
+					min-width: 33px;
+					height: 30px;
+					margin-right: 23px;
+				}
+
+				&-wapp {
+					width: 30px;
+					min-width: 30px;
+					height: 31px;
+				}
+			}
+		}
+	}
+
+	&__share {
+
+		&-container {
+			display: flex;
+			flex-direction: row;
+			position: relative;
+
+			@media (max-width: 1439px) {
+				flex-direction: column;
+			}
+		}
+
+		&-title {
+			width: 455px;
+			padding-bottom: 20px;
+
+			@media (max-width: 1439px) {
+				width: 100%;
+				padding-bottom: 25px;
+			}
+
+			&-indent {
+				padding-bottom: 13px;
+
+				@media (max-width: 1439px) {
+					padding-top: 51px;
+					padding-bottom: 16px;
+				}
+			}
+
+			&-size {
+				@media (max-width: 1439px) {
+					width: 224px;
+					padding-left: 3px;
+				}
+			}
+		}
+
+		&-social {
+			display: flex;
+			flex-direction: row;
+
+			&-icon {
+				&-fb {
+					width: 44px;
+					height: 44px;
+					min-width: 44px;
+					margin-right: 10px;
+				}
+
+				&-vk {
+					width: 44px;
+					height: 44px;
+					min-width: 44px;
+					margin-right: 10px;
+				}
+
+				&-tw {
+					width: 44px;
+					height: 44px;
+					min-width: 44px;
+				}
+			}
+		}
+
+		&__logo {
+			position: absolute;
+			right: 0; 
+			top: -2px;
+
+			@media (max-width: 1439px) {
+				left: 195px;
+				top: 191px;
+			}
+
+			&-image {
+				min-width: 219px;
+				width: 219px;
+				height: 250px;
+	
+				@media (max-width: 1439px) {
+					min-width: 104px;
+					width: 104px;
+					height: 117px;
+				}
+			}
+		}
+	}
+}
+//Блок Связаться с нами://
+
 
