@@ -1,1 +1,1 @@
- 
+let dropText = document.querySelector("take__drop-text");

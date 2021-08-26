@@ -17,10 +17,12 @@ body {
 
 .section {
 	width: 100%;
+	background-color: cadetblue;
 
 	&__content {
 		max-width: $maxWidth;
 		margin: 0px auto;
+		background-color: $white;
 
 		@media (max-width: 1439px) {
 			width: $minWidth;
@@ -143,7 +145,258 @@ body {
 //Блок баннер//
 
 
+//Блок О путешествии//
 
+.travel {
+	padding: 102px 165px 21px;
+	position: relative;
+
+	@media (max-width: 1439px) {
+		padding: 48px 20px 65px;
+	}
+
+	&__title {
+		padding-bottom: 54px;
+		letter-spacing: -1px;
+
+		@media (max-width: 1439px) {
+			padding-bottom: 3px;
+		}
+	}
+
+	&__text {
+		padding-bottom: 47px;
+		width: 598px;
+
+		@media (max-width: 1439px) {
+			width: 100%;
+			padding-bottom: 54px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+		&-box {
+			display: flex;
+			flex-direction: row;
+			width: 353px;
+			padding-bottom: 39px;
+
+			@media (max-width: 1439px) {
+				padding-bottom: 34px;
+			}
+
+			&-image {
+				padding-right: 30px;
+
+				@media (max-width: 1439px) {
+					padding-right: 20px;
+				}
+
+				&-icon {
+					width: 68px;
+					min-width: 68px;
+					height: 90px;
+
+					@media (max-width: 1439px) {
+						width: 55px;
+						min-width: 55px;
+						height: 72px;
+					}
+				}
+			}
+
+			&-text {
+				width: 255px;
+				max-width: 255px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+
+				@media (max-width: 1439px) {
+					width: 100%;
+				}
+
+				&-indent {
+					padding-bottom: 6px;
+
+					@media (max-width: 1439px) {
+						padding-bottom: 2px;
+					}
+				}
+			}
+		}
+	}
+
+	&__days {
+		padding-top: 53px;
+	}
+
+	&__day {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 760px;
+		height: 255px;
+		margin-bottom: 80px;
+
+		@media (max-width: 1439px) {
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			margin-bottom: 67px;
+		}
+
+		&-container {
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		&-image {
+			padding-right: 29px;
+
+			@media (max-width: 1439px) {
+				padding-right: 0;
+				padding-bottom: 18px;
+			}
+
+			&-item {
+				width: 255px;
+				height: 255px;
+				min-width: 255px;
+
+				@media (max-width: 1439px) {
+					width: 130px;
+					height: 130px;
+					min-width: 130px;
+				}
+			}
+		}
+
+		&-text {
+
+			&-indent {
+				padding-bottom: 13px;
+
+				@media (max-width: 1439px) {
+					padding-bottom: 3px;
+				}
+			}
+		}
+	}
+
+
+
+	&__line-1 {
+		position: absolute;
+		top: 799px;
+		left: 675px;
+		transform: rotate(34deg);
+
+		@media (max-width: 1439px) {
+			display: none;
+		}
+
+		&-image {
+			width: 435px;
+			height: 287px;
+			min-width: 435px;
+			
+		}
+	}
+
+	&__line-2 {
+		position: absolute;
+		top: 1195px;
+		left: 688px;
+		transform: rotate(35deg);
+
+		@media (max-width: 1439px) {
+			display: none;
+		}
+
+		&-image {
+			width: 278px;
+			height: 345px;
+			max-width: 278px;
+		}
+	}
+
+	&__line-3 {
+		position: absolute;
+		top: 1504px;
+		left: 632px;
+		transform: rotate(34deg);
+
+		@media (max-width: 1439px) {
+			display: none;
+		}
+
+		&-image {
+			width: 464px;
+			height: 185px;
+			max-width: 464px;
+		}
+	}
+
+	&__line-4 {
+		position: absolute;
+		top: 1875px;
+		left: 603px;
+		transform: rotate(-56deg);
+
+		@media (max-width: 1439px) {
+			display: none;
+		}
+
+		&-image {
+			width: 416px;
+			height: 258px;
+			max-width: 416px;
+		}
+	}
+
+	&__line-5 {
+		position: absolute;
+		top: 2253px;
+		left: 561px;
+		transform: rotate(-146deg);
+
+		@media (max-width: 1439px) {
+			display: none;
+		}
+
+		&-image {
+			width: 526px;
+			height: 158px;
+			max-width: 526px;
+		}
+	}
+
+	&__line-6 {
+		position: absolute;
+		top: 2526px;
+		left: 663px;
+		transform: rotate(-55deg);
+
+		@media (max-width: 1439px) {
+			display: none;
+		}
+
+		&-image {
+			width: 488px;
+			height: 324px;
+			max-width: 488px;
+		}
+	}
+
+}
+
+//Блок О путешествии//
 
 
 //Блок Что взять с собой://
@@ -205,7 +458,7 @@ body {
 		&-text {
 			width: 893px;
 			padding-bottom: 12px;
-			display: none;
+			//display: none;
 		}
 	}
 }
