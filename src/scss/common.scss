@@ -85,6 +85,13 @@ body {
 	}
 }
 
+.br-m {
+	display: none;
+	@media (max-width: 1439px) {
+		display: block;
+	}
+}
+
 
 //.slider {
 
@@ -152,7 +159,7 @@ body {
 	position: relative;
 
 	@media (max-width: 1439px) {
-		padding: 48px 20px 65px;
+		padding: 48px 20px 0;
 	}
 
 	&__title {
@@ -234,6 +241,10 @@ body {
 
 	&__days {
 		padding-top: 53px;
+
+		@media (max-width: 1439px) {
+			padding-top: 68px;
+		}
 	}
 
 	&__day {
@@ -248,8 +259,11 @@ body {
 			flex-direction: column;
 			width: 100%;
 			height: 100%;
-			margin-bottom: 67px;
+			margin-bottom: 0;
+			padding-bottom: 69px;
+			align-items: flex-start;
 		}
+		
 
 		&-container {
 			display: flex;
@@ -258,10 +272,17 @@ body {
 
 		&-image {
 			padding-right: 29px;
+			z-index: 1;
 
 			@media (max-width: 1439px) {
 				padding-right: 0;
 				padding-bottom: 18px;
+			}
+
+			&-indent {
+				@media (max-width: 1439px) {
+					padding-left: 150px;
+				}
 			}
 
 			&-item {
@@ -284,6 +305,7 @@ body {
 
 				@media (max-width: 1439px) {
 					padding-bottom: 3px;
+					z-index: 1;
 				}
 			}
 		}
@@ -394,6 +416,30 @@ body {
 		}
 	}
 
+	&__line-m {
+		display: none;
+
+		@media (max-width: 1439px) {
+			display: block;
+			position: absolute;
+			top: 1047px;
+			margin-left: -20px;
+			z-index: 0;
+		}
+
+		&-image {
+			width: 320px;
+			height: 2675px;
+			max-width: 320px;
+
+			&-image {
+				display: block;
+				width: 320px;
+				height: 2675px;
+				max-width: 320px;
+			}
+		}
+	}
 }
 
 //Блок О путешествии//
