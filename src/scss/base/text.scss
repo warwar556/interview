@@ -77,6 +77,16 @@
         line-height: 22px;
     }
 
+    &_18-22-2 {
+        font-size: 18px;
+        line-height: 22px;
+
+        @media (max-width: 1439px) {
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+
     &_10-16 {
         font-size: 10px;
         line-height: 16px;
@@ -280,6 +290,27 @@
             line-height: 24px;
         }
     }
+
+    &_80-80 {
+        font-size: 80px;
+        line-height: 80px;
+        
+        @media (max-width: 1439px) {
+            font-size: 48px;
+            line-height: 50px;
+        }
+    }
+
+    &_80-80-or {
+        font-size: 80px;
+        line-height: 80px;
+        color: $orange;
+        
+        @media (max-width: 1439px) {
+            font-size: 48px;
+            line-height: 50px;
+        }
+    }
 }
 
 .text-r {
@@ -379,6 +410,7 @@
     //        line-height: 21px;
     //    }
     //}
+
 }
 
 

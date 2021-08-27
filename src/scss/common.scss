@@ -87,7 +87,7 @@ body {
 				position: relative;
 				top: 40px;
 				right: 625px;
-		    }
+			}
 		}
 
 		&-list {
@@ -364,20 +364,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .btn {
 	display: flex;
     box-sizing: border-box;
@@ -397,7 +383,6 @@ body {
 	cursor: pointer;
 	text-decoration: none;
 	transition: 0.25s ease-out;
-	//will-change: contents;
 	border: 2px solid transparent;
 
 	&:hover{
@@ -416,6 +401,19 @@ body {
 		background-color: transparent;
 		color: $black;
 		width: 100%;
+		max-width: 100%;
+
+		&:hover{
+			background-color: $orange;
+			color: $white;
+			border: 2px solid $orange;
+		}
+	}
+
+	&_color-2 {
+		border: 2px solid $orange;
+		background-color: transparent;
+		color: $black;
 
 		&:hover{
 			background-color: $orange;
@@ -839,6 +837,7 @@ body {
 .take {
 	padding: 78px 165px 99px;
 	background: $gray-2;
+	user-select: none;
 
 	@media (max-width: 1439px) {
 		padding: 55px 2px 9px;
@@ -867,6 +866,7 @@ body {
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
+			cursor: pointer;
 
 			@media (max-width: 1439px) {
 				padding-bottom: 5px;
@@ -1326,6 +1326,186 @@ body {
 
 
 //==================================================================================
+
+
+//, 619px,710px
+
+.comfort {
+	width: 100%;
+	height: 100%;
+	padding: 8px 165px 52px;
+	background-image: url(../images/content/comfort-bg.png) ;
+	background-repeat: no-repeat;
+	background-size: 619px 710px;
+	background-position: top right;
+	position: relative;
+
+	@media (max-width: 1439px) {
+		padding: 0;
+		background-size: 320px 351px;
+		background-position: top center;
+	}
+	
+
+	&__logo {
+		padding-bottom: 112px;
+		margin-left: -23px;
+
+		@media (max-width: 1439px) {
+			display: none;
+		}
+
+		&-image {
+			width: 294px;
+			height: 106px;
+			min-width: 294px;
+		}
+	}
+
+	&__title {
+		padding-bottom: 114px;
+
+		@media (max-width: 1439px) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 392px;
+			padding-bottom: 67px;
+		}
+	}
+
+	&__description {
+		width: 697px;
+		height: 129px;
+		border: 1px solid $gray-4;
+		box-sizing: border-box;
+		border-radius: 15px;
+		background:  url(../images/content/comfort-description-bg.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 29px 25px 31px 48px;
+		display: flex;
+		flex-direction: row;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+
+		@media (max-width: 1439px) {
+			width: 100%;
+			height: 240px;
+			padding: 43px 31px 36px;
+			background:  url(../images/content/comfort-description-bg-m.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			flex-direction: column;
+		}
+
+		&-container {
+			width: 164px;
+			min-width: 164px;
+			height: 69px;
+			display: flex;
+			flex-direction: row;
+			margin-right: 26px;
+
+			@media (max-width: 1439px) {
+				width: 220px;
+				margin-right: 0;
+				align-items: center;
+				padding-bottom: 18px;
+
+				&:last-of-type {
+					padding-bottom: 0;
+				}
+			}
+
+			&_size {
+				width: 194px;
+				margin-left: 24px;
+
+				@media (max-width: 1439px) {
+					width: 220px;
+					margin-left: 0;
+				}
+			}
+
+			&_indent {
+				@media (max-width: 1439px) {
+					padding-bottom: 7px;
+				}
+			}
+		}
+
+		&-marker {
+			padding-right: 16px;
+
+			&-icon {
+				width: 15px;
+				height: 19px;
+				min-width: 15px;
+			}
+		}
+
+		&-text {
+			padding-top: 3px;
+		}
+
+		&-line {
+			position: absolute;
+			top: 170px;
+			left: -32px;
+			transform: rotate(35deg);
+
+			@media (max-width: 1439px) {
+				display: none;
+			}
+
+			&-icon {
+				width: 1258px;
+				min-width: 1258px;
+				height: 394px;
+				z-index: 1;
+			}
+
+			&-m {
+				position: absolute;
+				top: 279px;
+				left: -53px;
+				transform: rotate(34deg);
+				display: none;
+
+				@media (max-width: 1439px) {
+					display: block;
+				}
+
+				&-icon {
+					width: 347px;
+					min-width: 347px;
+					height: 251px;
+					z-index: 1;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Блок ОНАС://
 .about {
 	background-color: $gray-2;
@@ -1583,21 +1763,35 @@ body {
 
 
 
-
+//Блок НАШИ МАРШРУТЫ//
 .routes {
 	padding: 72px 165px 80px;
 
+	@media (max-width: 1439px) {
+		padding: 35px 20px 49px;
+	}
+
 	&__title {
 		padding-bottom: 40px;
+
+		@media (max-width: 1439px) {
+			padding-bottom: 30px;
+		}
 
 	}
 
 	&__selects {
 		padding-bottom: 40px;
+
+		@media (max-width: 1439px) {
+			padding-bottom: 19px;
+		}
 	}
 
 	&__cards {
-
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 }
 .card {
@@ -1606,19 +1800,48 @@ body {
 	min-width: 350px;
 	box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
 	border-radius: 15px;
+	transition: box-shadow 0.25s ease-in;
+	box-sizing: border-box;
+	margin-bottom: 43px;
+
+	&:hover{
+		box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.45);
+	}
+
+	@media (max-width: 1439px) {
+		width: 280px;
+		height: 382px;
+		min-width: 280px;
+		margin-bottom: 17px;
+	}
 
 	&__bg {
 		background-image: url(../images/content/card-bg.png);
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 		width: 350px;
 		height: 222px;
+		display: flex;
+		align-items: flex-end;
+		padding: 20px;
+		border-radius: 15px 15px 0 0;
+
+		@media (max-width: 1439px) {
+			width: 280px;
+			height: 185px;
+			min-width: 280px;
+			padding: 17px 22px;
+		}
 
 		&-children {
 			width: 100px;
 			height: 18px;
 			min-width: 100px;
 			background-color: $orange;
+			border-radius: 5px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 
@@ -1633,13 +1856,18 @@ body {
 	}
 
 	&__name {
-		padding-bottom: 22px;
+		margin-bottom: 22px;
 		width: 100%;
 		min-height: 58px;
 		height: 58px;
 	}
 
-	&__btn {
-
+	&__btn-all {
+		display: flex;
+		justify-content: center;
+		padding-top: 10px;
 	}
 }
+//Блок НАШИ МАРШРУТЫ//
+
+
