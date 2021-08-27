@@ -30,6 +30,14 @@ for (var i = 0; i < accordions.length; i++) {
         }
     }
 }
+
+//document.querySelector('.take__drop-title').addEventListener('click', (event) => {
+//	if (event.target.closest('.take__drop-title')) {
+//		event.target.closest('.take__drop-title')
+//			.classList.toggle('take__drop-text_active');
+//	}
+//});
+
 //аккордеон
 
 
