@@ -40,6 +40,7 @@ for (var i = 0; i < accordions.length; i++) {
 //});
 
 
+
 const isMobile = {
 	Android: function () {
 		return navigator.userAgent.match(/Android/i);
