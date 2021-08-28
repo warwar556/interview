@@ -7,6 +7,63 @@
     <title>project</title>
 </head>
 <body>
+
+    <div class="filter">
+        <div class="filter__container">
+            <p class="text text_22-33">Фильтр</p>
+            <img class="filter__close" src="../images/content/close-cross.svg" alt="close-cross">
+        </div>
+        <div class="filter__hr"></div>
+        <div class="filter__container-2">
+            <p class="text text_18-27-2">Сезон:</p>
+            <div class="filter__choice">
+                <div class="filter__choice-item filter__choice-item_active">
+                    <p>Зима</p>
+                </div>
+                <div class="filter__choice-item">
+                    <p>Весна</p>
+                </div>
+                <div class="filter__choice-item">
+                    <p>Лето</p>
+                </div>
+                <div class="filter__choice-item filter__choice-item_last">
+                    <p>Осень</p>
+                </div>
+            </div>
+        </div>
+        <div class="filter__hr"></div>
+        <div class="filter__container-2">
+            <p class="text text_18-27-2">Сезон:</p>
+            <div class="filter__choice">
+                <div class="filter__choice-item filter__choice-item_active">
+                    <p>Легкая</p>
+                </div>
+                <div class="filter__choice-item">
+                    <p>Средняя</p>
+                </div>
+                <div class="filter__choice-item">
+                    <p>Тяжелая</p>
+                </div>
+            </div>
+        </div>
+        <div class="filter__hr"></div>
+        <div class="filter__container-2">
+            <p class="text text_18-27-2">Стоимость:</p>
+            <form>
+                <div class="filter__inputs"> 
+                    <input class="filter__input" type="number" placeholder="от">
+                    <input class="filter__input" type="number" placeholder="до">
+                </div>
+            </form>
+        </div>
+        <div class="filter__hr"></div>
+        <div class="filter__container-5">
+            <p class="text text_18-27-2">Количество дней::</p>
+        </div>   
+    </div>
+
+
+
     <div class="wrapper">
         <header>
             <section class="section">
@@ -14,17 +71,30 @@
                     <div class="header__inner">
                         <a href=""><img src="../images/content/header-logo.png" class="header__logo" alt="header-logo"></a>
                         <div class="header__menu">
-                            <div class="header__menu-icon">
-                                <span></span>
+                            <div class="header__menu-burger">
+                                <!--<div class="header__menu-burger-line-1 header__menu-burger-line-1_active"></div>
+                                <div class="header__menu-burger-line-2"></div>
+                                <div class="header__menu-burger-line-3"></div>-->
+
+                                <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
+                                <label for="checkbox1">
+                                    <div class="burger burger1">
+                                        <span class="burger__bar burger__bar-1"></span>
+                                        <span class="burger__bar burger__bar-2"></span>
+                                        <span class="burger__bar burger__bar-3"></span>
+                                        <span class="burger__bar burger__bar-4"></span>
+                                    </div>
+                                </label>
                             </div>
+                            
         
                             <nav class="header__menu-body">
                                 <ul class="header__menu-list">
                                     <li><a data-goto="" href="#" class="text-s">Экспедиции</a></li>
-                                    <li><a data-goto="" href="#" class="text-s">Контакты</a></li>
+                                    <li><a data-goto="" href="#" class="text-s header__menu-list_indent">Контакты</a></li>
                                     <li><a class="text-s" href="tel:+79778003303">+7 (977) 800-33-03</a> </li>
                                     <li>
-                                        <button class="btn">
+                                        <button class="btn btn_color-4">
                                             <span>Забронировать</span>
                                         </button>
                                     </li>
@@ -36,33 +106,29 @@
                 </div>
             </div>
         </header>
-         
-          
-        <!--<header class="header">
-            <div class="header__container">
-                <a href="" class="header__logo"></a>
 
-                <div class="header__menu menu">
-                    <div class="menu__icon">
-                        <span></span>
+        <!--<header>
+            <section class="section">
+                <div class="section__content header__container">
+                    <a href=""><img src="../images/content/header-logo.png" class="header__logo" alt="header-logo"></a>
+                    <div class="header__menu menu">
+                        <div class="menu__icon">
+                            <span></span>
+                        </div>
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li><a data-goto="" href="#" class="text-s">Экспедиции</a></li>
+                                <li><a data-goto="" href="#" class="text-s">Контакты</a></li>
+                                <li><a class="text-s" href="tel:+79778003303">+7 (977) 800-33-03</a> </li>
+                            </ul>
+                        </nav>
                     </div>
-
-
-                    <nav class="menu__body">
-                        <ul class="menu__list">
-                            <li><a data-goto=".page__section_1" href="#" class="menu__link">Раздел №1</a></li>
-                            <li><a data-goto=".page__section_2" href="#" class="menu__link">Раздел №2</a></li>
-                            <li><a data-goto=".page__section_3" href="#" class="menu__link">Раздел №3</a></li>
-                        </ul>
-                    </nav>
-
-
                 </div>
-            </div>
+            </section>
+                 
         </header>-->
-
         <main>
-             
+
 
 
 
@@ -97,13 +163,13 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="../images/content/slide-1.jpg" alt="photo-1">
-                              </div>
-                              <div class="swiper-slide">
-                                  <img src="../images/content/slide-2.jpg" alt="photo-2">
-                              </div>
-                              <div class="swiper-slide">
-                                  <img src="../images/content/slide-3.jpg" alt="photo-3">
-                              </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../images/content/slide-2.jpg" alt="photo-2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../images/content/slide-3.jpg" alt="photo-3">
+                            </div>
                         </div>
                         <div class="swiper-button-next">
                             <img class="swiper-button-next-item" src="../images/content/slider-next.png" alt="button-next">
@@ -579,7 +645,7 @@
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                              <img class="" src="../images/content/slide-1.jpg" alt="photo-1">
+                                <img class="" src="../images/content/slide-1.jpg" alt="photo-1">
                             </div>
                             <div class="swiper-slide">
                                 <img class="" src="../images/content/slide-2.jpg" alt="photo-2">
@@ -588,7 +654,7 @@
                                 <img class="" src="../images/content/slide-3.jpg" alt="photo-3">
                             </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
             </div>
             <!--//Slider-2//-->   
@@ -689,9 +755,54 @@
                     <div class="routes__title">
                         <h2 class="text-ex text-ex_110-80-3">НАШИ МАРШРУТЫ</h2>
                     </div>
-                    <div class="routes__selects">
-                        <select name="" id=""></select>
-                    </div>
+
+                        <form>
+                            <div class="routes__selects">
+                                <!--<select class="routes__select" name="" id="">
+                                    <option value="React">React</option>
+                                    <option value="Angular">Angular</option>
+                                    <option value="Ember">Ember</option>
+                                    <option value="Vue">Vue</option>
+                                </select>-->
+                                <div class="select-box">
+                                    <div class="options-container">
+                                        <div class="option">
+                                            <input type="checkbox" class="checkbox" id="checkbox-1" name="">
+                                            <label for="checkbox-1">Осень</label>
+                                        </div>
+
+                                        <div class="option">
+                                            <input type="checkbox" class="checkbox" id="checkbox-2" name="">
+                                            <label for="checkbox-2">Лето</label>
+                                        </div>
+                                
+                                        <div class="option">
+                                            <input type="checkbox" class="checkbox" id="checkbox-3" name="">
+                                            <label for="checkbox-3">Зима</label>
+                                        </div>
+                    
+                                        <div class="option">
+                                            <input type="checkbox" class="checkbox" id="checkbox-4" name="">
+                                            <label for="checkbox-4">Весна</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="checkbox" class="checkbox" id="checkbox-5" name="">
+                                            <label for="checkbox-5">Осень</label>
+                                        </div>
+                                        <div class="option">
+                                            <input type="checkbox" class="checkbox" id="checkbox-6" name="">
+                                            <label for="checkbox-6">Осень</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">Сезон</div>
+                                </div>
+                            </div>
+                        </form>
+
+
+
+
+                    
                     <div class="routes__cards">
                         <div class="card">
                             <div class="card__bg">
@@ -832,8 +943,6 @@
 
 
 
-
-
         <!--//Блок О НАС//-->
         <section class="section">
             <div class="section__content">
@@ -921,14 +1030,45 @@
         <!--//ФОТОГРАФИИ ИЗ ТУРОВ-моб//-->
         <section class="section">
             <div class="section__content">
-                <div class="gallery__slider">
-                    slider
-                </div>
+                 <div class="gallery__title">
+                    <h2 class="text-ex text-ex_42-55">ФОТОГРАФИИ ИЗ ТУРОВ</h2>
+                 </div>
+                 <div class="gallery__container">
+                    <div class="swiper mySwiper gallery__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="wiper-slide__image-1" src="../images/content/gallery-1.png" alt="image-1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="wiper-slide__image-1" src="../images/content/gallery-2.png" alt="image-2">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="wiper-slide__image-1" src="../images/content/gallery-3.png" alt="image-3">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="wiper-slide__image-1" src="../images/content/gallery-4.png" alt="image-4">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="wiper-slide__image-1" src="../images/content/gallery-5.png" alt="image-5">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="wiper-slide__image-1" src="../images/content/gallery-3.png" alt="image-3">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="wiper-slide__image-1" src="../images/content/gallery-4.png" alt="image-4">
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="wiper-slide__image-1" src="../images/content/gallery-5.png" alt="image-5">
+                            </div>
+                        </div>
+                         
+                    </div>
+                    <div class="swiper-pagination pagination"></div>
+                 </div>
+
             </div>
         </div>
         <!--//ФОТОГРАФИИ ИЗ ТУРОВ-моб//-->
-
-
 
 
         <!--//footer//--> 
@@ -966,7 +1106,9 @@
         <!--//footer//-->
 
 
-        
+ 
+
+
 
 
     </div>

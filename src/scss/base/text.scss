@@ -36,6 +36,8 @@
         }
     }
 
+ 
+
     &_16-24 {
         font-size: 16px;
         line-height: 24px;
@@ -82,6 +84,11 @@
         }
     }
 
+    &_18-27-2 {
+        font-size: 18px;
+        line-height: 27px;
+    }
+
     &_20-30 {
         font-size: 20px;
         line-height: 30px;
@@ -91,6 +98,11 @@
             font-size: 18px;
             line-height: 27px;
         }
+    }
+
+    &_22-33 {
+        font-size: 22px;
+        line-height: 33px;
     }
 
     &_25-29 {
@@ -125,7 +137,7 @@
     }
 }
 
-.text-ex {
+.text-ex{
     font-size: 50px;
     line-height: 80px;
     font-weight: 800;
@@ -135,6 +147,11 @@
     @media (max-width: 1439px) {
         font-size: 40px;
         line-height: 52px;
+    }
+
+    &_42-55 {
+        font-size: 42px;
+        line-height: 55px;
     }
 
 
