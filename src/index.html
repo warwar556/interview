@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <!--<link rel="shortcut icon" href="#" type="image/x-icon">-->
     <title>project</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
         <div class="filter__container-2">
             <p class="text text_18-27-2">Сезон:</p>
             <div class="filter__choice">
-                <div class="filter__choice-item filter__choice-item_active">
+                <div class="filter__choice-item">
                     <p>Зима</p>
                 </div>
                 <div class="filter__choice-item">
@@ -33,9 +33,9 @@
         </div>
         <div class="filter__hr"></div>
         <div class="filter__container-2">
-            <p class="text text_18-27-2">Сезон:</p>
+            <p class="text text_18-27-2">Сложность:</p>
             <div class="filter__choice">
-                <div class="filter__choice-item filter__choice-item_active">
+                <div class="filter__choice-item">
                     <p>Легкая</p>
                 </div>
                 <div class="filter__choice-item">
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="filter__hr"></div>
-        <div class="filter__container-2">
+        <div class="filter__container-2 filter__container-2_indent">
             <p class="text text_18-27-2">Стоимость:</p>
             <form>
                 <div class="filter__inputs"> 
@@ -55,16 +55,33 @@
                     <input class="filter__input" type="number" placeholder="до">
                 </div>
             </form>
+            <div class="filter__slider">
+                <div class="filter__slider-line"></div>
+                <div class="filter__slider-circle-1"></div>
+                <div class="filter__slider-circle-2"></div>
+            </div>
         </div>
         <div class="filter__hr"></div>
-        <div class="filter__container-5">
-            <p class="text text_18-27-2">Количество дней::</p>
-        </div>   
+        <div class="filter__container-2">
+            <p class="text text_18-27-2">Количество дней:</p>
+            <form>
+                <div class="filter__inputs"> 
+                    <input class="filter__input" type="number" placeholder="от">
+                    <input class="filter__input" type="number" placeholder="до">
+                </div>
+            </form>
+            <div class="filter__slider">
+                <div class="filter__slider-line"></div>
+                <div class="filter__slider-circle-1"></div>
+                <div class="filter__slider-circle-2"></div>
+            </div>
+        </div> 
     </div>
 
 
 
     <div class="wrapper">
+        <!--//Блок header//-->   
         <header>
             <section class="section">
                 <div class="section__content">
@@ -89,50 +106,25 @@
                             
         
                             <nav class="header__menu-body">
-                                <ul class="header__menu-list">
-                                    <li><a data-goto="" href="#" class="text-s">Экспедиции</a></li>
-                                    <li><a data-goto="" href="#" class="text-s header__menu-list_indent">Контакты</a></li>
-                                    <li><a class="text-s" href="tel:+79778003303">+7 (977) 800-33-03</a> </li>
-                                    <li>
-                                        <button class="btn btn_color-4">
-                                            <span>Забронировать</span>
-                                        </button>
-                                    </li>
-                                    <li><span class="footer__contacts-lang text text_16-24"><a href="#" target="_blank" class="text text_16-24 text_16-24_active">RU</a>|<a href="#" target="_blank" class="text text_16-24">EN</a></span></li>
-                                </ul>
+                                <div class="header__menu-list">
+                                    <a data-goto="" href="#" class="text-s">Экспедиции</a>
+                                    <a data-goto="" href="#" class="text-s header__menu-list_indent">Контакты</a>
+                                    <a class="text-s" href="tel:+79778003303">+7 (977) 800-33-03</a>
+                                    <button class="btn btn_color-4 header__menu-list_indent-2">
+                                        <span>Забронировать</span>
+                                    </button>
+                                    <span class="text text_16-24"><a href="#" target="_blank" class="text text_16-24 text_16-24_active">RU</a>|<a href="#" target="_blank" class="text text_16-24">EN</a></span>
+                                </div>
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
+        <!--//Блок header//-->   
 
-        <!--<header>
-            <section class="section">
-                <div class="section__content header__container">
-                    <a href=""><img src="../images/content/header-logo.png" class="header__logo" alt="header-logo"></a>
-                    <div class="header__menu menu">
-                        <div class="menu__icon">
-                            <span></span>
-                        </div>
-                        <nav class="menu__body">
-                            <ul class="menu__list">
-                                <li><a data-goto="" href="#" class="text-s">Экспедиции</a></li>
-                                <li><a data-goto="" href="#" class="text-s">Контакты</a></li>
-                                <li><a class="text-s" href="tel:+79778003303">+7 (977) 800-33-03</a> </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </section>
-                 
-        </header>-->
         <main>
-
-
-
-
-
+            <!--//Блок Сплав по Катуни//-->  
             <section class="section">
                 <div class="section__content">
                     <div class="banner">
@@ -143,18 +135,56 @@
                     
                 </div>
             </div>
+            <!--//Блок Сплав по Катуни//-->
 
 
+            <!--//Блок интерактивная карта//-->   
             <section class="section">
                 <div class="section__content">
                     <div class="map">
-                         <div class="map__inner">
-                             ghgf
-                         </div>
+                        <div class="map__inner">
+                            <div class="map__point map__point-position-1">
+                                <div class="map__point-image">
+                                    <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
+                                    <p class="text-s text-s_20-30 map__point-title">Название</p>
+                                </div>
+                                <div class="map__point-description-container">
+                                    <div class="map__point-description map__point-description_right">
+                                        <div class="map__point-description-title">
+                                            <p class="text text_14-16-2">Короткое название тура</p>
+                                            <div class="map__point-description-hr"></div>
+                                        </div>
+                                        <button class="btn btn_small">
+                                            <span>Подробнее</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="map__point map__point-position-2">
+                                <div class="map__point-image">
+                                    <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
+                                    <p class="text-s text-s_20-30 map__point-title">Название</p>
+                                </div>
+                                <div class="map__point-description-container">
+                                    <div class="map__point-description map__point-description_right">
+                                        <div class="map__point-description-title">
+                                            <p class="text text_14-16-2">Короткое название тура</p>
+                                            <div class="map__point-description-hr"></div>
+                                        </div>
+                                        <button class="btn btn_small">
+                                            <span>Подробнее</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
             </div>
+            <!--//Блок интерактивная карта//-->
+
 
             <!--//Slider-1//-->   
             <section class="section">
@@ -467,9 +497,8 @@
             <!--//Блок GOOGLE карта://-->
             <section class="section">
                 <div class="section__content">
-                    <div class="g-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d157389.33441640495!2d85.48308649191436!3d51.94839195790989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m3!3m2!1d52.027088299999996!2d85.88474049999999!4m3!3m2!1d52.0692059!2d85.9082336!4m3!3m2!1d51.8266047!2d85.74326409999999!5e0!3m2!1sru!2sru!4v1630101073999!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                    </div>
+                    <!--<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d157389.33441640495!2d85.48308649191436!3d51.94839195790989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m3!3m2!1d52.027088299999996!2d85.88474049999999!4m3!3m2!1d52.0692059!2d85.9082336!4m3!3m2!1d51.8266047!2d85.74326409999999!5e0!3m2!1sru!2sru!4v1630101073999!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+                    <div class="g-map" style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс.Карты</a><a href="https://yandex.ru/maps/?ll=85.877961%2C51.878264&mode=routes&rtext=51.949064%2C85.814779~51.826466%2C85.763851&rtt=pd&ruri=~&utm_medium=mapframe&utm_source=maps&z=11.19" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCUmaXv1lA" width="100%" height="100%" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div> 
                 </div>
             </div>
             <!--//Блок GOOGLE карта://-->

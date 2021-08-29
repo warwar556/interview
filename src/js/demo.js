@@ -2,21 +2,19 @@
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 
-
- 
-
+//слайдеры
 window.addEventListener('load', (e) => {
     var swiper = new Swiper(".mySwiper", {
-		pagination: {
-			el: ".swiper-pagination",
-		},
+        pagination: {
+          el: ".swiper-pagination",
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
     });
 });
-
+//слайдеры
 
 
 //аккордеон
@@ -36,7 +34,71 @@ for (let i = 0; i < accordions.length; i++) {
 //аккордеон
 
 
+//Фильтр моб
+let filterSelect = document.getElementsByClassName("filter__choice-item");
+
+for (let i = 0; i < filterSelect.length; i++) {
+  filterSelect[i].onclick = function() {
+		this.classList.toggle('filter__choice-item_active');
+  };
+}
+//Фильтр моб
+
+//Селект декстоп
+const selected = document.querySelector(".selected");
+const optionsContainer = document.querySelector(".options-container");
+
+const optionsList = document.querySelectorAll(".option");
+
+selected.addEventListener("click", () => {
+  optionsContainer.classList.toggle("active");
+});
+
+optionsList.forEach(o => {
+  o.addEventListener("click", () => {
+    selected.innerHTML = o.querySelector("label").innerHTML;
+    optionsContainer.classList.remove("active");
+  });
+});
+//Селект декстоп
+
+
+
+//Карта интерактивная
+
+const pointMap = document.querySelector(".map__point-image");
+const descriptionMap = document.querySelector(".map__point-description-container");
+
+pointMap.addEventListener("click", () => {
+  descriptionMap.classList.toggle("map__point-description-container_active");
+});
+//Карта интерактивная
+
+
+
+
+//const iconMenu = document.querySelector('.header__menu-burger');
+//const menuBody = document.querySelector('.header__menu-body');
+
+////iconMenu.addEventListener("click", function (e) {
+////  //iconMenu.classList.toggle('_active');
+////  menuBody.classList.toggle('header__menu-body_active');
+////});
+
+//iconMenu[i].onclick = function() {
+//  menuBody.classList.toggle('header__menu-body_active');
+//};
+
+
+
+
+
  
+
+ 
+ 
+
+
 //const isMobile = {
 //	Android: function () {
 //		return navigator.userAgent.match(/Android/i);
@@ -120,31 +182,30 @@ for (let i = 0; i < accordions.length; i++) {
 //	}
 //}
 
+//const abc = document.querySelectorAll(".filter__choice-item");
+//if (abc) {
+//	abc.addEventListener("click", function (e) {
+//		menuBody.classList.toggle('filter__choice-item_active');
+//	});
+//}
+
+//document.querySelector(".filter__choice-item").onclick = function(){
+//  alert("Вы нажали на кнопку");
+//}
+
+//const filterSelect = document.querySelectorAll(".filter__choice-item");
+//if (filterSelect) {
+//	filterSelect.addEventListener("click", function (e) {
+//		filterSelect.classList.toggle('filter__choice-item_active');
+//	});
+//}
+
 
  
-const iconMenu = document.querySelector('.header__menu-burger');
-const menuBody = document.querySelector('.header__menu-body');
-if (iconMenu) {
-	iconMenu.addEventListener("click", function (e) {
-		menuBody.classList.toggle('header__menu-body_active');
-	});
-}
 
 
 
 
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
 
-const optionsList = document.querySelectorAll(".option");
 
-selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active");
-});
-
-optionsList.forEach(o => {
-  o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainer.classList.remove("active");
-  });
-});
+ 

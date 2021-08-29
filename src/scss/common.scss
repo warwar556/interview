@@ -124,6 +124,23 @@ body {
 			border: 2px solid $orange;
 		}
 	}
+
+	&_small {
+		max-width: 115px;
+		width: 115px;
+		height: 25px;
+		font-family: $fontFamily-Semibold;
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: 500;
+		border-radius: 8px;
+
+		@media (max-width: 1439px) {
+			font-size: 10px;
+			line-height: 16px;
+			border-radius: 8px;
+		}
+	}
 }
 
 .input-reserve {
@@ -177,7 +194,7 @@ body {
 	&-button {
 
 		&-prev {
-
+			
 		}
 
 		&-next {
@@ -515,7 +532,7 @@ select {
 .filter {
 	width: 320px;
 	height: 598px;
-	padding: 20px;
+	padding: 18px 20px 20px;
 	background-color: rgb(199, 212, 214);
 
 	&__container {
@@ -523,7 +540,7 @@ select {
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		padding-bottom: 6px;
+		padding-bottom: 1px;
 	}
 
 	&__close {
@@ -541,7 +558,12 @@ select {
 	}
 
 	&__container-2 {
-		padding: 12px 0;
+		padding: 6px 0 12px;
+		position: relative;
+
+		&_indent {
+			padding-bottom: 28px;
+		}
 	}
 
 	&__choice {
@@ -549,6 +571,7 @@ select {
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		padding-top: 2px;
 
 		&-item {
 			width: 87px;
@@ -581,7 +604,8 @@ select {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		padding-bottom: 22px;
+		padding-top: 3px;
+		padding-bottom: 29px;
 	}
 
 	&__input {
@@ -598,6 +622,39 @@ select {
 		color: $gray;
 		-moz-appearance: none;
 		-webkit-appearance: none;
+	}
+
+	&__slider {
+
+		&-line {
+			width: 100%;
+			height: 3px;
+			background-color: $gray;
+			border-radius: 5px;
+		}
+
+		&-circle-1 {
+			width: 20px;
+			height: 20px;
+			min-width: 20px;
+			background-color: $orange;
+			border-radius: 50px;
+			position: absolute;
+			top: 81px;
+			cursor: pointer;
+		}
+
+		&-circle-2 {
+			width: 20px;
+			height: 20px;
+			min-width: 20px;
+			background-color: $orange;
+			border-radius: 50px;
+			position: absolute;
+			top: 81px;
+			left: 200px;
+			cursor: pointer;
+		}
 	}
 }
 input::-webkit-outer-spin-button,
@@ -904,7 +961,81 @@ input[type=number] {
 	height: 664px;
 
 	&__inner {
+		position: relative;
+	}
 
+	&__point {
+		position: absolute;
+
+		&-position-1 {
+			top: 350px;
+			left: 750px;
+		}
+
+		&-position-2 {
+			top: 150px;
+			left: 250px;
+		}
+
+		&-image {
+			width: 27px;
+			height: 35px;
+			min-width: 27px;
+		}
+
+		&-title {
+			
+		}
+
+		&-image {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		&-description {
+			width: 340px;
+			height: 40px;
+			padding: 0 14px 0 21px;
+			background-color: $gray-2;
+			border: 1px solid $orange;
+			box-sizing: border-box;
+			border-radius: 15px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;	
+			position: absolute;
+
+			&-container {
+				display: none;
+
+				&_active {
+					display: block;
+				}
+			}
+
+			&_right {
+				top: -5px;
+				left: 35px;
+			}
+
+			&_left {
+				top: -5px;
+				left: -345px;
+			}
+			
+			&-title {
+
+			}
+
+			&-hr {
+				width: 100%;
+				height: 1px;
+				background-color: rgba(0, 0, 0, 0.510417);
+			}
+		}
 	}
 }
 //Блок Карта//
@@ -1748,6 +1879,10 @@ input[type=number] {
 	width: 160px;
 	flex-direction: column;
 	position: relative;
+
+	@media (max-width: 1439px) {
+		width: 100%;
+	}
 
 }
 

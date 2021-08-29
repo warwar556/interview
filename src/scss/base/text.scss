@@ -13,10 +13,21 @@
         color: $white;
     }
 
-    &_14-16 {
+    &_14-16-2 {
         font-size: 14px;
         line-height: 16px;
-        color: $gray;
+        color: $black;
+
+        @media (max-width: 1439px) {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+
+    &_14-16-or {
+        font-size: 14px;
+        line-height: 16px;
+        color: $orange;
     }
 
     &_14-16-or {
@@ -401,9 +412,15 @@
     font-style: normal;
     color: $white;
 
-    &:hover {
-        color: $gray;
-        transition: ease-in 0.25s;
+    &_20-30 {
+        font-size: 20px;
+        line-height: 30px;
+        color: $black;
+
+        @media (max-width: 1439px) {
+            font-size: 14px;
+            line-height: 14px;
+        }
     }
 }
 
