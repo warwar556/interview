@@ -162,6 +162,12 @@ body {
 		line-height: 18px;
 		padding: 16px 28px;
 	}
+
+	&_modal {
+		width: 350px;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
 }
 
 .br-m {
@@ -207,6 +213,7 @@ body {
 		top: 323px;
 		left: 132px;
 		z-index: 10;
+		cursor: pointer;
 
 		@media (max-width: 1439px) {
 			display: none;
@@ -223,14 +230,13 @@ body {
 		top: 323px;
 		right: 132px;
 		z-index: 10;
+		cursor: pointer;
 
 		@media (max-width: 1439px) {
 			display: none;
 		}
 	}
 }
-
-
 
 .swiper-button-prev {
 	width: 20px;
@@ -441,25 +447,17 @@ body {
 		@media (max-width: 1439px) {
 			padding-bottom: 30px;
 		}
-
 	}
 
 	&__selects {
 		padding-bottom: 40px;
+		display: flex;
+		flex-direction: row;
 
 		@media (max-width: 1439px) {
 			padding-bottom: 19px;
 		}
 	}
-
-	//&_select {
-	//	width: 160px;
-	//	height: 30px;
-	//	min-width: 160px;
-	//}
-
-
-
 
 	&__cards {
 		display: flex;
@@ -467,29 +465,6 @@ body {
 		justify-content: space-between;
 	}
 }
-
-
-select {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	border: none;
-	position: relative;
-	outline: none;
-
-	&:after{
-		content: "";
-		display: block;
-		width: 130px;
-		height: 30px;
-		//position: absolute;
-		right: 5px;
-		top: 5px;
-		border: 2px solid red;
-	}
-}
-
-
-
 
 .card {
 	width: 350px;
@@ -574,7 +549,7 @@ select {
 	width: 320px;
 	height: 598px;
 	padding: 18px 20px 20px;
-	background-color: rgb(199, 212, 214);
+	background-color: $white;
 
 	&__container {
 		display: flex;
@@ -629,7 +604,6 @@ select {
 			font-family: $fontFamily-Medium;
 			font-style: normal;
 			color: $black;
- 
 
 			&_active {
 				background-color: $orange;
@@ -664,53 +638,44 @@ select {
 		-moz-appearance: none;
 		-webkit-appearance: none;
 	}
-
-	&__slider {
-
-		&-line {
-			width: 100%;
-			height: 3px;
-			background-color: $gray;
-			border-radius: 5px;
-		}
-
-		&-circle-1 {
-			width: 20px;
-			height: 20px;
-			min-width: 20px;
-			background-color: $orange;
-			border-radius: 50px;
-			position: absolute;
-			top: 81px;
-			cursor: pointer;
-		}
-
-		&-circle-2 {
-			width: 20px;
-			height: 20px;
-			min-width: 20px;
-			background-color: $orange;
-			border-radius: 50px;
-			position: absolute;
-			top: 81px;
-			left: 200px;
-			cursor: pointer;
-		}
-	}
 }
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+	-webkit-appearance: none;
+	margin: 0;
 }
 input[type=number] {
 	-moz-appearance:textfield;
 }
 
+.noUi-target {
+	background-color: $gray !important;
+	border-radius: 4px;
+	box-shadow:none !important;
+}
+.noUi-connect {
+	background: none !important;
+}
 
+.noUi-horizontal {
+	height: 3px !important;
+}
 
+.noUi-horizontal .noUi-handle {
+    width: 20px !important;
+    height: 20px !important;
+    right: -12px !important;
+    top: -10px !important;
+	border-radius: 50%;
+	background-color: $orange;
+	box-shadow: none;
+	border: none;
+}
 
-
+.noUi-handle:before, .noUi-handle:after {
+    display: none !important;
+}
 //Блок НАШИ МАРШРУТЫ//
 
 
@@ -994,21 +959,28 @@ input[type=number] {
 
 //Блок Карта//
 .map {
-	background-image: url(../images/content/map2.png);
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-color: $gray-2;
+ 
 	width: 100%;
 	height: 664px;
-	overflow: scroll;
+	position: relative;
 
 	@media (max-width: 1439px) {
-		width: 1273px;
 		height: 584px;
 	}
 
 	&__inner {
 		position: relative;
+		background-image: url(../images/content/map2.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-color: $gray-2;
+		width: 100%;
+		height: 664px;
+		overflow: scroll;
+
+		@media (max-width: 1439px) {
+			height: 584px;
+		}
 	}
 
 	&__point {
@@ -1020,7 +992,7 @@ input[type=number] {
 		}
 
 		&-position-2 {
-			top: 150px;
+			top: 230px;
 			left: 250px;
 		}
 
@@ -1028,10 +1000,6 @@ input[type=number] {
 			width: 27px;
 			height: 35px;
 			min-width: 27px;
-		}
-
-		&-title {
-			
 		}
 
 		&-image {
@@ -1054,6 +1022,34 @@ input[type=number] {
 			align-items: center;
 			justify-content: space-between;	
 			position: absolute;
+
+			&_rel {
+				position: relative;
+			}
+
+			&-big {
+				width: 380px;
+				min-width: 294px;
+				height: 236px;
+				background: $white;
+				border: 1px solid $orange;
+				box-sizing: border-box;
+				border-radius: 15px;
+				padding: 9px 10px 9px 14px;
+				overflow: auto;
+
+				&_right {
+					position: absolute;
+					top: -200px;
+					left: 30px;
+				}
+
+				&_left {
+					position: absolute;
+					top: -200px;
+					left: -385px;
+				}
+			}
 
 			&-container {
 				display: none;
@@ -1082,6 +1078,24 @@ input[type=number] {
 				height: 1px;
 				background-color: rgba(0, 0, 0, 0.510417);
 			}
+		}
+	}
+
+	&__arrows {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0 0 7px 25px;
+
+		@media (max-width: 1439px) {
+			display: block;
+		}
+
+		&-image {
+			width: 68px;
+			height: 20px;
+			min-width: 68px;
 		}
 	}
 }
@@ -1535,6 +1549,7 @@ input[type=number] {
 }
 //Блок GOOGLE карта://
 
+
 //Блок Что взять с собой://
 .take {
 	padding: 73px 165px 99px;
@@ -1620,9 +1635,7 @@ input[type=number] {
 		}
 	}
 }
-.img-svg path {
-	fill:#020725;
-}
+
 //Блок Что взять с собой://
 
 //Блок Бронируйте ваш тур мечты//
@@ -1670,6 +1683,7 @@ input[type=number] {
 			padding-bottom: 25px;
 		}
 	}
+
 
 	&__btn-container {
 		display: flex;
@@ -1876,12 +1890,6 @@ input[type=number] {
 //Блок Связаться с нами://
 
 //=======Страница тура======//==========================================
-
-
-
-
-
-
 .gallery {
 	&_m {
 		display: none;
@@ -1926,26 +1934,28 @@ input[type=number] {
 	justify-content: space-between;
 }
 
-
-
-
 .select-box {
 	display: flex;
 	width: 160px;
 	flex-direction: column;
 	position: relative;
+	margin-right: 20px;
 
 	@media (max-width: 1439px) {
 		width: 100%;
+		margin-right: 0;
 	}
 
+	&_size {
+		width: 190px;
+	}
+
+	&_dn-m {
+		@media (max-width: 1439px) {
+			display: none;
+		}
+	}
 }
-
-
-//.checkbox-container {
-//	position: absolute;
-//	top: 30px;
-//}
 
 .select-box .checkbox-container {
 	background: $white;
@@ -2069,14 +2079,4 @@ input[type=number] {
 		}
 	}
 }
-
-
-
-
-
-
-
-
-//-----------------------
-
  

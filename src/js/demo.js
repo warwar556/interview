@@ -1,6 +1,11 @@
 
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
+import noUiSlider from 'nouislider';
+import 'nouislider/dist/nouislider.css';
+
+import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+import 'simplebar/dist/simplebar.css';
 
 //слайдеры
 window.addEventListener('load', (e) => {
@@ -73,12 +78,45 @@ pointMap.addEventListener("click", () => {
 //Карта интерактивная
 
 
+//Модальное окно
+const modal = document.querySelector('.js-modal');
+const modalToggler = document.querySelectorAll('.js-toggle-modal');
+
+const onModalToggle = (e) => {
+  modal.classList.toggle('modal_visible');
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+modalToggler.forEach((el) => {
+  el.addEventListener('click', onModalToggle, false);
+})
+//Модальное окно
 
 
+//Слайдер Range
+var slider = document.getElementById('slider');
 
+noUiSlider.create(slider, {
+    start: [0, 100],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    }
+});
 
+var slider = document.getElementById('slider-2');
 
-
+noUiSlider.create(slider, {
+    start: [0, 100],
+    connect: true,
+    range: {
+        'min': 0,
+        'max': 100
+    }
+});
+//Слайдер Range
 
 
 

@@ -7,84 +7,9 @@
     <title>project</title>
 </head>
 <body>
-
-    <div class="filter">
-        <div class="filter__container">
-            <p class="text text_22-33">Фильтр</p>
-            <img class="filter__close" src="../images/content/close-cross.svg" alt="close-cross">
-        </div>
-        <div class="filter__hr"></div>
-        <div class="filter__container-2">
-            <p class="text text_18-27-2">Сезон:</p>
-            <div class="filter__choice">
-                <div class="filter__choice-item">
-                    <p>Зима</p>
-                </div>
-                <div class="filter__choice-item">
-                    <p>Весна</p>
-                </div>
-                <div class="filter__choice-item">
-                    <p>Лето</p>
-                </div>
-                <div class="filter__choice-item filter__choice-item_last">
-                    <p>Осень</p>
-                </div>
-            </div>
-        </div>
-        <div class="filter__hr"></div>
-        <div class="filter__container-2">
-            <p class="text text_18-27-2">Сложность:</p>
-            <div class="filter__choice">
-                <div class="filter__choice-item">
-                    <p>Легкая</p>
-                </div>
-                <div class="filter__choice-item">
-                    <p>Средняя</p>
-                </div>
-                <div class="filter__choice-item">
-                    <p>Тяжелая</p>
-                </div>
-            </div>
-        </div>
-        <div class="filter__hr"></div>
-        <div class="filter__container-2 filter__container-2_indent">
-            <p class="text text_18-27-2">Стоимость:</p>
-            <form>
-                <div class="filter__inputs"> 
-                    <input class="filter__input" type="number" placeholder="от">
-                    <input class="filter__input" type="number" placeholder="до">
-                </div>
-            </form>
-            <div class="filter__slider">
-                <div class="filter__slider-line"></div>
-                <div class="filter__slider-circle-1"></div>
-                <div class="filter__slider-circle-2"></div>
-            </div>
-        </div>
-        <div class="filter__hr"></div>
-        <div class="filter__container-2">
-            <p class="text text_18-27-2">Количество дней:</p>
-            <form>
-                <div class="filter__inputs"> 
-                    <input class="filter__input" type="number" placeholder="от">
-                    <input class="filter__input" type="number" placeholder="до">
-                </div>
-            </form>
-            <div class="filter__slider">
-                <div class="filter__slider-line"></div>
-                <div class="filter__slider-circle-1"></div>
-                <div class="filter__slider-circle-2"></div>
-            </div>
-        </div> 
-
-         
-    </div>
-
-
-
     <div class="wrapper">
         <!--//Блок header//-->   
-        <!--<header>
+        <header>
             <section class="section">
                 <div class="section__content">
                     <div class="header__inner">
@@ -101,15 +26,32 @@
                                     </div>
                                 </label>
                             </div>
-                        
+                    
                             <nav class="header__menu-body">
                                 <div class="header__menu-list">
                                     <a data-goto="" href="#routes" class="text-s">Экспедиции</a>
                                     <a data-goto="" href="#contacts" class="text-s header__menu-list_indent">Контакты</a>
                                     <a class="text-s" href="tel:+79778003303">+7 (977) 800-33-03</a>
-                                    <button class="btn btn_color-4 header__menu-list_indent-2">
+                                    <button class="btn btn_color-4 header__menu-list_indent-2 js-toggle-modal">
                                         <span>Забронировать</span>
                                     </button>
+                                    <div class="modal js-modal">
+                                        <div class="modal__content">
+
+                                            <div class="modal__content-close js-toggle-modal">
+                                                <img src="../images/content/close-cross.svg" alt="close-modal">
+                                            </div>
+
+                                                <form action="#">
+                                                    <input class="input-reserve input-reserve_modal" type="text" placeholder="Номер телефона">
+                                                </form>
+                                                <button class="btn">
+                                                    <span>Отправить</span>
+                                                </button>
+                                            </div>
+                                            
+                                        <div class="modal__overlay js-toggle-modal"></div>
+                                    </div>
                                     <span class="text text_16-24"><a href="#" target="_blank" class="text text_16-24 text_16-24_active">RU</a>|<a href="#" target="_blank" class="text text_16-24">EN</a></span>
                                 </div>
                             </nav>
@@ -117,7 +59,7 @@
                     </div>
                 </div>
             </div>
-        </header>-->
+        </header>
         <!--//Блок header//-->   
 
         <main>
@@ -136,9 +78,8 @@
 
 
             <!--//Блок интерактивная карта//-->   
-            <!--<section class="section">
+            <section class="section">
                 <div class="section__content">
-
                     <div class="map">
                         <div class="map__inner">
                             <div class="map__point map__point-position-1">
@@ -146,7 +87,7 @@
                                     <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
                                     <p class="text-s text-s_20-30 map__point-title">Название</p>
                                 </div>
-                                <div class="map__point-description-container">
+                                <div class="map__point-description-container map__point-description-container_active">
                                     <div class="map__point-description map__point-description_left">
                                         <div class="map__point-description-title">
                                             <p class="text text_14-16-2">Короткое название тура</p>
@@ -158,29 +99,104 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="map__point map__point-position-2">
                                 <div class="map__point-image">
                                     <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
                                     <p class="text-s text-s_20-30 map__point-title">Название</p>
                                 </div>
-                                <div class="map__point-description-container">
-                                    <div class="map__point-description map__point-description_right">
-                                        <div class="map__point-description-title">
-                                            <p class="text text_14-16-2">Короткое название тура</p>
-                                            <div class="map__point-description-hr"></div>
+                                <div class="map__point-description-container map__point-description-container_active">
+                                    <div class="map__point-description-big map__point-description-big_right">
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
                                         </div>
-                                        <button class="btn btn_small">
-                                            <span>Подробнее</span>
-                                        </button>
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
+                                        <div class="map__point-description map__point-description_rel">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="map__arrows">
+                            <img class="map__arrows-image" src="../images/content/arrows-map.svg" alt="map-arrows">
+                        </div>
                     </div>
-                    
                 </div>
-            </div>-->
+            </div>
             <!--//Блок интерактивная карта//-->
 
 
@@ -508,7 +524,11 @@
                             <div class="take__drop-title">
                                 <p class="text-b text-b_18-27">Одежда</p>
                                 <div class="take__drop-btn">
-                                    <img class="take__drop-btn-cross img-svg" src="../images/content/cross.svg" alt="cross">
+                                    <!--<img class="take__drop-btn-cross img-svg" src="../images/content/cross.svg" alt="cross">-->
+                                    <svg class="take__drop-btn-cross" width="25" height="25" viewBox="0 0 25 25"   xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="12.6665" y1="1" x2="12.6665" y2="24" stroke="#FF7A40" stroke-width="2" stroke-linecap="round"/>
+                                        <line x1="24" y1="12.6667" x2="1" y2="12.6667" stroke="#FF7A40" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
                                 </div>
                             </div>
                             <div class="take__drop-text">
@@ -784,19 +804,8 @@
 
                         <form>
                             <div class="routes__selects">
-                                <!--<select class="routes__select" name="" id="">
-                                    <option value="React">React</option>
-                                    <option value="Angular">Angular</option>
-                                    <option value="Ember">Ember</option>
-                                    <option value="Vue">Vue</option>
-                                </select>-->
                                 <div class="select-box">
                                     <div class="checkbox-container">
-                                        <!--<div class="option">
-                                            <input type="checkbox" class="checkbox" id="checkbox-1" name="">
-                                            <label for="checkbox-1">Осень</label>
-                                        </div>-->
-
                                         <div class="option checkbox__filter">
                                             <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select"/>
                                             <label for="checkbox__input-select" class="checkbox__filter-label">Лето</label>
@@ -816,10 +825,80 @@
                                             <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-4"/>
                                             <label for="checkbox__input-select-4" class="checkbox__filter-label">Осень</label>
                                         </div>
-
-
                                     </div>
                                     <div class="selected">Сезон</div>
+                                </div>
+                                <div class="select-box select-box_dn-m">
+                                    <div class="checkbox-container">
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select"/>
+                                            <label for="checkbox__input-select" class="checkbox__filter-label">Лето</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-2"/>
+                                            <label for="checkbox__input-select-2" class="checkbox__filter-label">Зима</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-3"/>
+                                            <label for="checkbox__input-select-3" class="checkbox__filter-label">Весна</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-4"/>
+                                            <label for="checkbox__input-select-4" class="checkbox__filter-label">Осень</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">Сложность</div>
+                                </div>
+                                <div class="select-box select-box_dn-m">
+                                    <div class="checkbox-container">
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select"/>
+                                            <label for="checkbox__input-select" class="checkbox__filter-label">Лето</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-2"/>
+                                            <label for="checkbox__input-select-2" class="checkbox__filter-label">Зима</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-3"/>
+                                            <label for="checkbox__input-select-3" class="checkbox__filter-label">Весна</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-4"/>
+                                            <label for="checkbox__input-select-4" class="checkbox__filter-label">Осень</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">Стоимость</div>
+                                </div>
+                                <div class="select-box select-box_dn-m select-box_size">
+                                    <div class="checkbox-container">
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select"/>
+                                            <label for="checkbox__input-select" class="checkbox__filter-label">Лето</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-2"/>
+                                            <label for="checkbox__input-select-2" class="checkbox__filter-label">Зима</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-3"/>
+                                            <label for="checkbox__input-select-3" class="checkbox__filter-label">Весна</label>
+                                        </div>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-4"/>
+                                            <label for="checkbox__input-select-4" class="checkbox__filter-label">Осень</label>
+                                        </div>
+                                    </div>
+                                    <div class="selected">Количество дней</div>
                                 </div>
                             </div>
                         </form>
@@ -1128,12 +1207,74 @@
         </footer>
         <!--//footer//-->
 
-
- 
-
-
-
-
+        <!--//фильтр моб//-->
+        <section class="section">
+            <div class="section__content gallery_m">
+                <div class="filter">
+                    <div class="filter__container">
+                        <p class="text text_22-33">Фильтр</p>
+                        <img class="filter__close" src="../images/content/close-cross.svg" alt="close-cross">
+                    </div>
+                    <div class="filter__hr"></div>
+                    <div class="filter__container-2">
+                        <p class="text text_18-27-2">Сезон:</p>
+                        <div class="filter__choice">
+                            <div class="filter__choice-item">
+                                <p>Зима</p>
+                            </div>
+                            <div class="filter__choice-item">
+                                <p>Весна</p>
+                            </div>
+                            <div class="filter__choice-item">
+                                <p>Лето</p>
+                            </div>
+                            <div class="filter__choice-item filter__choice-item_last">
+                                <p>Осень</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__hr"></div>
+                    <div class="filter__container-2">
+                        <p class="text text_18-27-2">Сложность:</p>
+                        <div class="filter__choice">
+                            <div class="filter__choice-item">
+                                <p>Легкая</p>
+                            </div>
+                            <div class="filter__choice-item">
+                                <p>Средняя</p>
+                            </div>
+                            <div class="filter__choice-item">
+                                <p>Тяжелая</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter__hr"></div>
+                    <div class="filter__container-2 filter__container-2_indent">
+                        <p class="text text_18-27-2">Стоимость:</p>
+                        <form>
+                            <div class="filter__inputs"> 
+                                <input class="filter__input" type="number" placeholder="от">
+                                <input class="filter__input" type="number" placeholder="до">
+                            </div>
+                        </form>
+                        <div id="slider"></div>
+                    </div>
+                    <div class="filter__hr"></div>
+                    <div class="filter__container-2">
+                        <p class="text text_18-27-2">Количество дней:</p>
+                        <form>
+                            <div class="filter__inputs"> 
+                                <input class="filter__input" type="number" placeholder="от">
+                                <input class="filter__input" type="number" placeholder="до">
+                            </div>
+                        </form>
+                        <div id="slider-2"></div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!--//фильтр моб//-->
+         
     </div>
 </body>
 </html>
