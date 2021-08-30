@@ -9,8 +9,8 @@ window.addEventListener('load', (e) => {
           el: ".swiper-pagination",
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".arrow-next",
+            prevEl: ".arrow-prev",
         },
     });
 });
@@ -46,9 +46,9 @@ for (let i = 0; i < filterSelect.length; i++) {
 
 //Селект декстоп
 const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".options-container");
+const optionsContainer = document.querySelector(".checkbox-container");
 
-const optionsList = document.querySelectorAll(".option");
+const optionsList = document.querySelectorAll(".checkbox");
 
 selected.addEventListener("click", () => {
   optionsContainer.classList.toggle("active");
@@ -76,22 +76,28 @@ pointMap.addEventListener("click", () => {
 
 
 
-$('img.img-svg').each(function(){
-  var $img = $(this);
-  var imgClass = $img.attr('class');
-  var imgURL = $img.attr('src');
-  $.get(imgURL, function(data) {
-    var $svg = $(data).find('svg');
-    if(typeof imgClass !== 'undefined') {
-      $svg = $svg.attr('class', imgClass+' replaced-svg');
-    }
-    $svg = $svg.removeAttr('xmlns:a');
-    if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
-      $svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
-    }
-    $img.replaceWith($svg);
-  }, 'xml');
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //const iconMenu = document.querySelector('.header__menu-burger');

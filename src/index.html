@@ -76,23 +76,21 @@
                 <div class="filter__slider-circle-2"></div>
             </div>
         </div> 
+
+         
     </div>
 
 
 
     <div class="wrapper">
         <!--//Блок header//-->   
-        <header>
+        <!--<header>
             <section class="section">
                 <div class="section__content">
                     <div class="header__inner">
                         <a href=""><img src="../images/content/header-logo.png" class="header__logo" alt="header-logo"></a>
                         <div class="header__menu">
                             <div class="header__menu-burger">
-                                <!--<div class="header__menu-burger-line-1 header__menu-burger-line-1_active"></div>
-                                <div class="header__menu-burger-line-2"></div>
-                                <div class="header__menu-burger-line-3"></div>-->
-
                                 <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
                                 <label for="checkbox1">
                                     <div class="burger burger1">
@@ -103,8 +101,7 @@
                                     </div>
                                 </label>
                             </div>
-                            
-        
+                        
                             <nav class="header__menu-body">
                                 <div class="header__menu-list">
                                     <a data-goto="" href="#routes" class="text-s">Экспедиции</a>
@@ -120,7 +117,7 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </header>-->
         <!--//Блок header//-->   
 
         <main>
@@ -139,8 +136,9 @@
 
 
             <!--//Блок интерактивная карта//-->   
-            <section class="section">
+            <!--<section class="section">
                 <div class="section__content">
+
                     <div class="map">
                         <div class="map__inner">
                             <div class="map__point map__point-position-1">
@@ -149,7 +147,7 @@
                                     <p class="text-s text-s_20-30 map__point-title">Название</p>
                                 </div>
                                 <div class="map__point-description-container">
-                                    <div class="map__point-description map__point-description_right">
+                                    <div class="map__point-description map__point-description_left">
                                         <div class="map__point-description-title">
                                             <p class="text text_14-16-2">Короткое название тура</p>
                                             <div class="map__point-description-hr"></div>
@@ -182,7 +180,7 @@
                     </div>
                     
                 </div>
-            </div>
+            </div>-->
             <!--//Блок интерактивная карта//-->
 
 
@@ -201,12 +199,8 @@
                                 <img src="../images/content/slide-3.jpg" alt="photo-3">
                             </div>
                         </div>
-                        <div class="swiper-button-next">
-                            <img class="swiper-button-next-item" src="../images/content/slider-next.png" alt="button-next">
-                        </div>
-                        <div class="swiper-button-prev">
-                            <img src="../images/content/slider-prev.png" alt="button-prev">
-                        </div>
+                        <div class="arrow-prev"></div>
+                        <div class="arrow-next"></div>
                     </div>
                 </div>
             </div>
@@ -684,12 +678,8 @@
                                 <img src="../images/content/slide-3.jpg" alt="photo-3">
                             </div>
                         </div>
-                        <div class="swiper-button-next">
-                            <img class="swiper-button-next-item" src="../images/content/slider-next.png" alt="button-next">
-                        </div>
-                        <div class="swiper-button-prev">
-                            <img src="../images/content/slider-prev.png" alt="button-prev">
-                        </div>
+                        <div class="arrow-prev"></div>
+                        <div class="arrow-next"></div>
                     </div>
                 </div>
             </div>
@@ -801,34 +791,33 @@
                                     <option value="Vue">Vue</option>
                                 </select>-->
                                 <div class="select-box">
-                                    <div class="options-container">
-                                        <div class="option">
+                                    <div class="checkbox-container">
+                                        <!--<div class="option">
                                             <input type="checkbox" class="checkbox" id="checkbox-1" name="">
                                             <label for="checkbox-1">Осень</label>
+                                        </div>-->
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select"/>
+                                            <label for="checkbox__input-select" class="checkbox__filter-label">Лето</label>
                                         </div>
 
-                                        <div class="option">
-                                            <input type="checkbox" class="checkbox" id="checkbox-2" name="">
-                                            <label for="checkbox-2">Лето</label>
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-2"/>
+                                            <label for="checkbox__input-select-2" class="checkbox__filter-label">Зима</label>
                                         </div>
-                                
-                                        <div class="option">
-                                            <input type="checkbox" class="checkbox" id="checkbox-3" name="">
-                                            <label for="checkbox-3">Зима</label>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-3"/>
+                                            <label for="checkbox__input-select-3" class="checkbox__filter-label">Весна</label>
                                         </div>
-                    
-                                        <div class="option">
-                                            <input type="checkbox" class="checkbox" id="checkbox-4" name="">
-                                            <label for="checkbox-4">Весна</label>
+
+                                        <div class="option checkbox__filter">
+                                            <input class="checkbox__filter-input" type="checkbox" id="checkbox__input-select-4"/>
+                                            <label for="checkbox__input-select-4" class="checkbox__filter-label">Осень</label>
                                         </div>
-                                        <div class="option">
-                                            <input type="checkbox" class="checkbox" id="checkbox-5" name="">
-                                            <label for="checkbox-5">Осень</label>
-                                        </div>
-                                        <div class="option">
-                                            <input type="checkbox" class="checkbox" id="checkbox-6" name="">
-                                            <label for="checkbox-6">Осень</label>
-                                        </div>
+
+
                                     </div>
                                     <div class="selected">Сезон</div>
                                 </div>
@@ -1065,7 +1054,7 @@
 
         <!--//ФОТОГРАФИИ ИЗ ТУРОВ-моб//-->
         <section class="section">
-            <div class="section__content">
+            <div class="section__content gallery_m">
                  <div class="gallery__title">
                     <h2 class="text-ex text-ex_42-55">ФОТОГРАФИИ ИЗ ТУРОВ</h2>
                  </div>
@@ -1097,11 +1086,9 @@
                                 <img class="wiper-slide__image-1" src="../images/content/gallery-5.png" alt="image-5">
                             </div>
                         </div>
-                         
                     </div>
                     <div class="swiper-pagination pagination"></div>
-                 </div>
-
+                </div>
             </div>
         </div>
         <!--//ФОТОГРАФИИ ИЗ ТУРОВ-моб//-->
