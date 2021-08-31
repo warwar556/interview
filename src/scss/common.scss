@@ -30,6 +30,10 @@ body {
 	}
 }
 
+.bodyscroll {
+	overflow: hidden;
+}
+
 .br-m {
 	display: none;
 
@@ -175,6 +179,57 @@ body {
 
 	@media (max-width: 1439px) {
 		display: block;
+	}
+}
+
+
+.filter-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1001;
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	&_visible {
+		display: flex;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 1003;
+		min-width: 300px;
+		min-height: 50px;
+		padding: 35px;
+		background-color: $white;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&-close {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			width: 20px;
+			height: 20px;
+			min-width: 20px;
+			cursor: pointer;
+		}
+	}
+
+	&__overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		z-index: 1002;
+		background: rgba(0, 0, 0, 0.6);
 	}
 }
 
@@ -551,9 +606,13 @@ body {
 
 .filter {
 	width: 320px;
-	height: 598px;
+	height: 100vh;
 	padding: 18px 20px 20px;
 	background-color: $white;
+
+	//&_active {
+	//	display: block;
+	//}
 
 	&__container {
 		display: flex;
@@ -1014,24 +1073,38 @@ input[type=number] {
 //Блок Карта//
 
 
+
+
+
 .map {
 	width: 100%;
-	height: 664px;
+	height: 684px;
 	
 
 	@media (max-width: 1439px) {
 		height: 329px;
-		overflow: hidden;
+		overflow-y: hidden;
+    	overflow-x: scroll;
+	}
+
+	&__content {
+
+
+		@media (max-width: 1439px) {
+			width: 100%;
+			height: 329px;
+		}
 	}
 	
 	&__inner {
 		width: 100%;
-		height: 664px;
+		height: 684px;
 		background-image: url(../images/content/map.png);
 		background-repeat: no-repeat;
 		background-size: 1271px 644px;
 		background-position: left 92px top 20px;
 		background-color: $gray-2;
+		position: relative;
 
 
 		@media (max-width: 1439px) {
@@ -1042,9 +1115,132 @@ input[type=number] {
 			overflow: scroll;
 		}
 	}
+
+	&__point {
+		position: absolute;
+
+		&-position-1 {
+			top: 350px;
+			left: 750px;
+		}
+
+		&-position-2 {
+			top: 230px;
+			left: 250px;
+		}
+
+		&-image {
+			width: 27px;
+			height: 35px;
+			min-width: 27px;
+		}
+
+		&-image {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		&-description {
+			width: 340px;
+			height: 40px;
+			padding: 0 14px 0 21px;
+			background-color: $gray-2;
+			border: 1px solid $orange;
+			box-sizing: border-box;
+			border-radius: 15px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;	
+			position: absolute;
+
+			&_rel {
+				position: relative;
+			}
+
+			&-big {
+				width: 380px;
+				min-width: 294px;
+				height: 236px;
+				background: $white;
+				border: 1px solid $orange;
+				box-sizing: border-box;
+				border-radius: 15px;
+				padding: 9px 10px 9px 14px;
+
+				&_right {
+					position: absolute;
+					top: -200px;
+					left: 30px;
+				}
+
+				&_left {
+					position: absolute;
+					top: -200px;
+					left: -385px;
+				}
+			}
+
+			&-container {
+				display: none;
+
+				&_active {
+					display: block;
+				}
+			}
+
+			&_right {
+				top: -5px;
+				left: 35px;
+			}
+
+			&_left {
+				top: -5px;
+				left: -345px;
+			}
+			
+			&-title {
+
+			}
+
+			&-hr {
+				width: 100%;
+				height: 1px;
+				background-color: rgba(0, 0, 0, 0.510417);
+			}
+		}
+	}
+
+	&__arrows {
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		margin: 0 0 7px 25px;
+
+		@media (max-width: 1439px) {
+			display: block;
+		}
+
+		&-image {
+			width: 68px;
+			height: 20px;
+			min-width: 68px;
+		}
+	}
+}
+.simplebar-scrollbar {
+	//width: 9px !important;
+	height: 95px !important;
+	top: 25px;
+	border-radius: 15px !important;
 }
 
-
+.simplebar-scrollbar:before {
+	background-color: $orange !important;
+}
 
 
 

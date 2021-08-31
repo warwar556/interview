@@ -90,17 +90,20 @@
 			z-index: 1001;
 
 			@media (max-width: 1439px) {
-				width: $minWidth;
-				height: 100%;
+				width: 0;
+				height: 100vh;
 				position: absolute;
 				margin-left: 0;
 				transition: margin-left 1s ease-out;
-				display: none;
+				left: -260px;
+				top: 30px;
+				overflow-x: hidden;
+  				transition: 0.5s;
 			}
 
 			&_active {
 				@media (max-width: 1439px) {
-					display: block;
+					width: 320px;
 				}
 			}
 		}
@@ -132,8 +135,11 @@
 					margin: 25px 0 44px;
 				}
 			}
-		}
 
+			&-tel {
+				white-space: nowrap;
+			}
+		}
 	}
 }
 
@@ -181,24 +187,24 @@
 }
  
 
-.checkbox1:checked + label > .burger1 > .burger__bar-1{
+.checkbox1:checked + label > .burger > .burger__bar-1{
     transform: rotate(45deg);
     transform-origin: 10%;
     width: 25px;
 	top: 4px;
 }
 
-.checkbox1:checked + label > .burger1 > .burger__bar-2 {
+.checkbox1:checked + label > .burger > .burger__bar-2 {
     transform: translateX(-20px);
     background-color: transparent;
 }
 
-.checkbox1:checked + label > .burger1 > .burger__bar-3 {
+.checkbox1:checked + label > .burger > .burger__bar-3 {
     transform: translateX(20px);
     background-color: transparent;
 }
 
-.checkbox1:checked + label > .burger1 > .burger__bar-4 {
+.checkbox1:checked + label > .burger > .burger__bar-4 {
     transform-origin: 10%;
     transform: rotate(-45deg);
     width: 25px;
@@ -255,5 +261,6 @@
 	}
 }
 
-
-
+.bodyscroll {
+	overflow: hidden;
+}

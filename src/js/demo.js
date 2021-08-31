@@ -82,12 +82,12 @@ let openPopovers = [];
 
 //Карта интерактивная
 
-const pointMap = document.querySelector(".map__point-image");
-const descriptionMap = document.querySelector(".map__point-description-container");
+//const pointMap = document.querySelector(".map__point-image");
+//const descriptionMap = document.querySelector(".map__point-description-container");
 
-pointMap.addEventListener("click", () => {
-  descriptionMap.classList.toggle("map__point-description-container_active");
-});
+//pointMap.addEventListener("click", () => {
+//  descriptionMap.classList.toggle("map__point-description-container_active");
+//});
 //Карта интерактивная
 
 
@@ -132,26 +132,86 @@ noUiSlider.create(slider, {
 //Слайдер Range
 
 //Модальное окно фильтр моб.
+const modalFilter = document.querySelector('.js-filter-modal');
+const modalTogglerFilter = document.querySelectorAll('.js-filter-toggle-modal');
 
+const onModalToggleFilter = (e) => {
+  modalFilter.classList.toggle('filter-modal_visible');
+  bodyScroll.classList.toggle('bodyscroll');
+  e.stopPropagation();
+  e.preventDefault();
+}
+
+modalTogglerFilter.forEach((el) => {
+  el.addEventListener('click', onModalToggleFilter, false);
+})
 //Модальное окно фильтр моб.
 
 
+const burger = document.querySelector('.checkbox1');
+const menuBurger = document.querySelector('.header__menu-body');
+const bodyScroll = document.body;
+
+burger.addEventListener("click", function (e) {
+  menuBurger.classList.toggle('header__menu-body_active');
+  bodyScroll.classList.toggle('bodyscroll');
+});
 
 
 
 
 
 
+//var element = document.querySelector('.classname');
+//                                      ^
+//element.addEventListener("click", function(e) {
+//    alert('something');
+//}, false);
+
+
+//burger[i].onclick = function() {
+//  menuBurger.classList.toggle('header__menu-body_active');
+//};
+
+//burger.addEventListener("click", () => {
+//  menuBurger.classList.toggle('.header__menu-body_active');
+//});
+
+
+ 
+
+
+//burger.classList.toggle('test__body_active');
+//function openNav() {
+//  document.querySelector(".test__body").style.width = "100%";
+//}
+
+//function closeNav() {
+//  document.querySelector(".test__body").style.width = "0%";
+//}
+
+
+ 
+
+//burger.addEventListener("click", function (e) {
+//  //iconMenu.classList.toggle('_active');
+//  menuBurger.classList.toggle('test__body_active');
+//});
+
+//burger[i].onclick = function() {
+//  //menuBurger.classList.toggle('test__body_active');
+//  document.querySelector(".test__body").style.width = "100%"
+//};
 
 
 
+//let filterSelect = document.getElementsByClassName("filter__choice-item");
 
-
-
-
-
-
-
+//for (let i = 0; i < filterSelect.length; i++) {
+//  filterSelect[i].onclick = function() {
+//		this.classList.toggle('filter__choice-item_active');
+//  };
+//}
 
 
 
@@ -279,13 +339,3 @@ noUiSlider.create(slider, {
 //		filterSelect.classList.toggle('filter__choice-item_active');
 //	});
 //}
-
-
- 
-
-
-
-
-
-
- 

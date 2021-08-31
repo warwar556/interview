@@ -18,7 +18,7 @@
                             <div class="header__menu-burger">
                                 <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
                                 <label for="checkbox1">
-                                    <div class="burger burger1">
+                                    <div class="burger">
                                         <span class="burger__bar burger__bar-1"></span>
                                         <span class="burger__bar burger__bar-2"></span>
                                         <span class="burger__bar burger__bar-3"></span>
@@ -26,11 +26,12 @@
                                     </div>
                                 </label>
                             </div>
+
                             <nav class="header__menu-body">
                                 <div class="header__menu-list">
-                                    <a data-goto="" href="#routes" class="text-s">Экспедиции</a>
-                                    <a data-goto="" href="#contacts" class="text-s header__menu-list_indent">Контакты</a>
-                                    <a class="text-s" href="tel:+79778003303">+7 (977) 800-33-03</a>
+                                    <a href="#routes" class="text-s">Экспедиции</a>
+                                    <a href="#contacts" class="text-s header__menu-list_indent">Контакты</a>
+                                    <a class="text-s header__menu-list-tel" href="tel:+79778003303">+7 (977) 800-33-03</a>
                                     <button class="btn btn_color-4 header__menu-list_indent-2 js-toggle-modal">
                                         <span>Забронировать</span>
                                     </button>
@@ -52,6 +53,8 @@
                                     <span class="text text_16-24"><a href="#" target="_blank" class="text text_16-24 text_16-24_active">RU</a>|<a href="#" target="_blank" class="text text_16-24">EN</a></span>
                                 </div>
                             </nav>
+
+                            
                         </div>
                     </div>
                 </div>
@@ -79,122 +82,223 @@
 
             <section class="section">
                 <div class="section__content ">
-                    <div class="map">
-                        <div class="map__inner">
 
-                            <!--<div class="map__point map__point-position-1">
-                                <div class="map__point-image">
-                                    <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
-                                    <p class="text-s text-s_20-30 map__point-title">Название</p>
-                                </div>
-                                <div class="map__point-description-container map__point-description-container_active">
-                                    <div class="map__point-description map__point-description_left">
-                                        <div class="map__point-description-title">
-                                            <p class="text text_14-16-2">Короткое название тура</p>
-                                            <div class="map__point-description-hr"></div>
+                    <div class="map__content">
+                        <div class="map">
+                            <div class="map__inner">
+    
+                                <!--<div class="map__point map__point-position-1">
+                                    <div class="map__point-image">
+                                        <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
+                                        <p class="text-s text-s_20-30 map__point-title">Название</p>
+                                    </div>
+                                    <div class="map__point-description-container map__point-description-container_active">
+                                        <div class="map__point-description map__point-description_left">
+                                            <div class="map__point-description-title">
+                                                <p class="text text_14-16-2">Короткое название тура</p>
+                                                <div class="map__point-description-hr"></div>
+                                            </div>
+                                            <button class="btn btn_small">
+                                                <span>Подробнее</span>
+                                            </button>
                                         </div>
-                                        <button class="btn btn_small">
-                                            <span>Подробнее</span>
-                                        </button>
                                     </div>
                                 </div>
+                                <div class="map__point map__point-position-2">
+                                    <div class="map__point-image">
+                                        <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
+                                        <p class="text-s text-s_20-30 map__point-title">Название</p>
+                                    </div>
+                                    <div  class="map__point-description-container map__point-description-container_active">
+                                        <div data-simplebar class="map__point-description-big map__point-description-big_right">
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                            
+                                <div class="map__point map__point-position-2">
+                                    <div class="map__point-image">
+                                        <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
+                                        <p class="text-s text-s_20-30 map__point-title">Название</p>
+                                    </div>
+                                    <div  class="map__point-description-container map__point-description-container_active">
+                                        <div data-simplebar class="map__point-description-big map__point-description-big_right">
+                                            
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                            <div class="map__point-description map__point-description_rel">
+                                                <div class="map__point-description-title">
+                                                    <p class="text text_14-16-2">Короткое название тура</p>
+                                                    <div class="map__point-description-hr"></div>
+                                                </div>
+                                                <button class="btn btn_small">
+                                                    <span>Подробнее</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            
                             </div>
-                            <div class="map__point map__point-position-2">
-                                <div class="map__point-image">
-                                    <img class="map__point-image" src="../images/content/point-map.png" alt="map-point">
-                                    <p class="text-s text-s_20-30 map__point-title">Название</p>
-                                </div>
-                                <div  class="map__point-description-container map__point-description-container_active">
-                                    <div data-simplebar class="map__point-description-big map__point-description-big_right">
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                        <div class="map__point-description map__point-description_rel">
-                                            <div class="map__point-description-title">
-                                                <p class="text text_14-16-2">Короткое название тура</p>
-                                                <div class="map__point-description-hr"></div>
-                                            </div>
-                                            <button class="btn btn_small">
-                                                <span>Подробнее</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
+                            <div class="map__arrows">
+                                <img class="map__arrows-image" src="../images/content/arrows-map.svg" alt="map-arrows">
+                            </div>
+    
+    
+    
                         </div>
-                        <!--<div class="map__arrows">
-                            <img class="map__arrows-image" src="../images/content/arrows-map.svg" alt="map-arrows">
-                        </div>-->
                     </div>
+                     
                 </div>
             </div>
 
@@ -1042,74 +1146,93 @@
                                 </div>
                             </div>
 
+
+
                             <div class="filter__mobile-container">
-                                <div class="filter__mobile">
+
+
+
+                                <div class="filter__mobile js-filter-toggle-modal">
                                     <p>Фильтр</p>
                                 </div>
-                                <div class="filter">
-                                    <div class="filter__container">
-                                        <p class="text text_22-33">Фильтр</p>
-                                        <img class="filter__close" src="../images/content/close-cross.svg" alt="close-cross">
-                                    </div>
-                                    <div class="filter__hr"></div>
-                                    <div class="filter__container-2">
-                                        <p class="text text_18-27-2">Сезон:</p>
-                                        <div class="filter__choice">
-                                            <div class="filter__choice-item">
-                                                <p>Зима</p>
+
+
+                                <div class="filter-modal js-filter-modal">
+                                    <div class="filter-modal__content">
+
+
+                                        <div class="filter">
+                                            <div class="filter__container">
+                                                <p class="text text_22-33">Фильтр</p>
+                                                <img class="filter__close js-filter-toggle-modal" src="../images/content/close-cross.svg" alt="close-cross">
                                             </div>
-                                            <div class="filter__choice-item">
-                                                <p>Весна</p>
+                                            <div class="filter__hr"></div>
+                                            <div class="filter__container-2">
+                                                <p class="text text_18-27-2">Сезон:</p>
+                                                <div class="filter__choice">
+                                                    <div class="filter__choice-item">
+                                                        <p>Зима</p>
+                                                    </div>
+                                                    <div class="filter__choice-item">
+                                                        <p>Весна</p>
+                                                    </div>
+                                                    <div class="filter__choice-item">
+                                                        <p>Лето</p>
+                                                    </div>
+                                                    <div class="filter__choice-item filter__choice-item_last">
+                                                        <p>Осень</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="filter__choice-item">
-                                                <p>Лето</p>
+                                            <div class="filter__hr"></div>
+                                            <div class="filter__container-2">
+                                                <p class="text text_18-27-2">Сложность:</p>
+                                                <div class="filter__choice">
+                                                    <div class="filter__choice-item">
+                                                        <p>Легкая</p>
+                                                    </div>
+                                                    <div class="filter__choice-item">
+                                                        <p>Средняя</p>
+                                                    </div>
+                                                    <div class="filter__choice-item">
+                                                        <p>Тяжелая</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="filter__choice-item filter__choice-item_last">
-                                                <p>Осень</p>
+                                            <div class="filter__hr"></div>
+                                            <div class="filter__container-2 filter__container-2_indent">
+                                                <p class="text text_18-27-2">Стоимость:</p>
+                                                <form>
+                                                    <div class="filter__inputs"> 
+                                                        <input class="filter__input" type="number" placeholder="от">
+                                                        <input class="filter__input" type="number" placeholder="до">
+                                                    </div>
+                                                </form>
+                                                <div id="slider"></div>
                                             </div>
+                                            <div class="filter__hr"></div>
+                                            <div class="filter__container-2">
+                                                <p class="text text_18-27-2">Количество дней:</p>
+                                                <form>
+                                                    <div class="filter__inputs"> 
+                                                        <input class="filter__input" type="number" placeholder="от">
+                                                        <input class="filter__input" type="number" placeholder="до">
+                                                    </div>
+                                                </form>
+                                                <div id="slider-2"></div>
+                                            </div> 
                                         </div>
+                                        
+                                        
                                     </div>
-                                    <div class="filter__hr"></div>
-                                    <div class="filter__container-2">
-                                        <p class="text text_18-27-2">Сложность:</p>
-                                        <div class="filter__choice">
-                                            <div class="filter__choice-item">
-                                                <p>Легкая</p>
-                                            </div>
-                                            <div class="filter__choice-item">
-                                                <p>Средняя</p>
-                                            </div>
-                                            <div class="filter__choice-item">
-                                                <p>Тяжелая</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="filter__hr"></div>
-                                    <div class="filter__container-2 filter__container-2_indent">
-                                        <p class="text text_18-27-2">Стоимость:</p>
-                                        <form>
-                                            <div class="filter__inputs"> 
-                                                <input class="filter__input" type="number" placeholder="от">
-                                                <input class="filter__input" type="number" placeholder="до">
-                                            </div>
-                                        </form>
-                                        <div id="slider"></div>
-                                    </div>
-                                    <div class="filter__hr"></div>
-                                    <div class="filter__container-2">
-                                        <p class="text text_18-27-2">Количество дней:</p>
-                                        <form>
-                                            <div class="filter__inputs"> 
-                                                <input class="filter__input" type="number" placeholder="от">
-                                                <input class="filter__input" type="number" placeholder="до">
-                                            </div>
-                                        </form>
-                                        <div id="slider-2"></div>
-                                    </div> 
                                 </div>
+
                             </div>
                         </div>
                     </form>
+
+
+
 
                     <div class="routes__cards">
                         <div class="card">
