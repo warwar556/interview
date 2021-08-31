@@ -970,7 +970,7 @@ input[type=number] {
 
 	&__inner {
 		position: relative;
-		background-image: url(../images/content/map2.png);
+		background-image: url(../images/content/map.png);
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-color: $gray-2;
@@ -1593,6 +1593,15 @@ input[type=number] {
 					transform: rotate(45deg);
 				}
 			}
+
+			.cross-color {
+				stroke: $orange;
+				transition: ease-in 0.25s;
+
+				&_active {
+					stroke: $black;
+				}
+			}
 		}
 
 		&-btn {
@@ -1934,6 +1943,9 @@ input[type=number] {
 	justify-content: space-between;
 }
 
+
+
+
 .select-box {
 	display: flex;
 	width: 160px;
@@ -2040,10 +2052,10 @@ input[type=number] {
 
 .checkbox {
 
-	&-container {
-		position: absolute;
-		top: 30px;
-	}
+	//&-container {
+	//	position: absolute;
+	//	top: 30px;
+	//}
 
 	&__filter {
 		cursor: pointer;
@@ -2078,5 +2090,105 @@ input[type=number] {
 			}
 		}
 	}
+}
+
+
+.popover {
+	position: relative;
+	width: 160px;
+	min-width: 160px;
+	height: 30px;
+	padding: 6px 19px;
+	background: $white;
+	transition: all 0.4s;
+	border-radius: 5px;
+	border: 1px solid $gray;
+	order: 1;
+	font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    font-family: $fontFamily-Medium;
+    font-style: normal;
+    color: $gray;
+	margin-right: 30px;
+	cursor: pointer;
+
+	@media (max-width: 1439px) {
+		width: 100%;
+		min-width: 100%;
+	}
+
+	&::after {
+		content: "";
+		background: url(../images/content/arrow-down.svg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		height: 100%;
+		width: 12px;
+		right: 9px;
+		top: 10px;
+		transition: all 0.4s;
+		overflow-y: auto;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&_size {
+		width: 190px;
+		min-width: 190px;
+	}
+
+	&_hidden {
+		@media (max-width: 1439px) {
+			display: none;
+		}
+	}
+}
+.popover__content {
+	display: none;
+	position: absolute;
+	top: 29px;
+	left: -1px;
+	width: 160px;
+	height: 147px;
+	padding: 11px 11px 10px 19px;
+	border-radius: 5px;
+	border: 1px solid $gray;
+	background-color: #fff;
+	font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    font-family: $fontFamily-Medium;
+    font-style: normal;
+    color: $gray;
+	z-index: 101;
+
+	@media (max-width: 1439px) {
+		width: 100%;
+		min-width: 100%;
+	}
+
+	&-input {
+		padding: 7px 0px;
+	}
+
+	&_size {
+		width: 190px;
+		min-width: 190px;
+	}
+}
+
+
+.popover .select-box .checkbox-container.active + .popover::after {
+	transform: rotateX(180deg);
+	top: -9px;
+}
+
+.popover_visible .popover__content {
+	display: block;
 }
  

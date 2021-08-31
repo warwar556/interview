@@ -4,7 +4,7 @@ import 'swiper/swiper-bundle.css';
 import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 
-import 'simplebar'; // or "import SimpleBar from 'simplebar';" if you want to use it manually.
+import 'simplebar';
 import 'simplebar/dist/simplebar.css';
 
 //слайдеры
@@ -23,19 +23,65 @@ window.addEventListener('load', (e) => {
 
 
 //аккордеон
-let accordions = document.getElementsByClassName("take__drop-title");
 
-for (let i = 0; i < accordions.length; i++) {
-    accordions[i].onclick = function() {
-		this.classList.toggle('take__drop-title_active');
-        let content = this.nextElementSibling;
-        if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-        } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-        }
+{/*<button id="onclick_v_addEventListener">Это третий способ реализации Onclick в JavaScript</button>
+
+<script>
+
+document.querySelector("#onclick_v_addEventListener") .addEventListener("click", myFoo);
+
+function myFoo()
+
+{
+
+alert("Это третий способ реализации Onclick в JavaScript через addEventListener и вывод через alert");
+
+}*/}
+
+
+//let accordions = document.getElementsByClassName("take__drop-title");
+
+//for (let i = 0; i < accordions.length; i++) {
+//    accordions[i].onclick = function() {
+//		this.classList.toggle('take__drop-title_active');
+//        let content = this.nextElementSibling;
+//        if (content.style.maxHeight) {
+//            content.style.maxHeight = null;
+//        } else {
+//            content.style.maxHeight = content.scrollHeight + "px";
+//        }
+//    }
+//}
+
+let openPopovers = [];
+
+    const onPopoverClick = (el) => {
+      el.classList.toggle('popover_visible');
     }
-}
+
+    const popovers = document.querySelectorAll('.js-popover');
+    popovers.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        onPopoverClick(el);
+        e.stopPropagation();
+        e.preventDefault();
+      }, false);
+    })
+
+    const onBreak = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+    }
+    const popoverBreak = document.querySelectorAll('.js-popover-break');
+    popoverBreak.forEach((el) => {
+      el.addEventListener('click', onBreak, false);
+    });
+
+    document.addEventListener('click', function(event) {
+      popovers.forEach((el) => {
+        el.classList.remove('popover_visible');
+      })
+    });
 //аккордеон
 
 
@@ -117,6 +163,8 @@ noUiSlider.create(slider, {
     }
 });
 //Слайдер Range
+
+
 
 
 
