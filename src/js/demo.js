@@ -3,7 +3,6 @@ import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
 import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
-
 import 'simplebar';
 import 'simplebar/dist/simplebar.css';
 
@@ -23,36 +22,34 @@ window.addEventListener('load', (e) => {
 
 
 //аккордеон
+let accordions = document.getElementsByClassName("take__drop-title");
 
-{/*<button id="onclick_v_addEventListener">Это третий способ реализации Onclick в JavaScript</button>
+for (let i = 0; i < accordions.length; i++) {
+    accordions[i].onclick = function() {
+		this.classList.toggle('take__drop-title_active');
 
-<script>
-
-document.querySelector("#onclick_v_addEventListener") .addEventListener("click", myFoo);
-
-function myFoo()
-
-{
-
-alert("Это третий способ реализации Onclick в JavaScript через addEventListener и вывод через alert");
-
-}*/}
+        let content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    }
+}
+//аккордеон
 
 
-//let accordions = document.getElementsByClassName("take__drop-title");
+//Фильтр моб
+let filterSelect = document.getElementsByClassName("filter__choice-item");
 
-//for (let i = 0; i < accordions.length; i++) {
-//    accordions[i].onclick = function() {
-//		this.classList.toggle('take__drop-title_active');
-//        let content = this.nextElementSibling;
-//        if (content.style.maxHeight) {
-//            content.style.maxHeight = null;
-//        } else {
-//            content.style.maxHeight = content.scrollHeight + "px";
-//        }
-//    }
-//}
+for (let i = 0; i < filterSelect.length; i++) {
+  filterSelect[i].onclick = function() {
+		this.classList.toggle('filter__choice-item_active');
+  };
+}
+//Фильтр моб
 
+//Селект декстоп
 let openPopovers = [];
 
     const onPopoverClick = (el) => {
@@ -70,7 +67,6 @@ let openPopovers = [];
 
     const onBreak = (e) => {
       e.stopPropagation();
-      e.preventDefault();
     }
     const popoverBreak = document.querySelectorAll('.js-popover-break');
     popoverBreak.forEach((el) => {
@@ -82,35 +78,6 @@ let openPopovers = [];
         el.classList.remove('popover_visible');
       })
     });
-//аккордеон
-
-
-//Фильтр моб
-let filterSelect = document.getElementsByClassName("filter__choice-item");
-
-for (let i = 0; i < filterSelect.length; i++) {
-  filterSelect[i].onclick = function() {
-		this.classList.toggle('filter__choice-item_active');
-  };
-}
-//Фильтр моб
-
-//Селект декстоп
-const selected = document.querySelector(".selected");
-const optionsContainer = document.querySelector(".checkbox-container");
-
-const optionsList = document.querySelectorAll(".checkbox");
-
-selected.addEventListener("click", () => {
-  optionsContainer.classList.toggle("active");
-});
-
-optionsList.forEach(o => {
-  o.addEventListener("click", () => {
-    selected.innerHTML = o.querySelector("label").innerHTML;
-    optionsContainer.classList.remove("active");
-  });
-});
 //Селект декстоп
 
 //Карта интерактивная
@@ -124,7 +91,7 @@ pointMap.addEventListener("click", () => {
 //Карта интерактивная
 
 
-//Модальное окно
+//Модальное окно header
 const modal = document.querySelector('.js-modal');
 const modalToggler = document.querySelectorAll('.js-toggle-modal');
 
@@ -137,7 +104,7 @@ const onModalToggle = (e) => {
 modalToggler.forEach((el) => {
   el.addEventListener('click', onModalToggle, false);
 })
-//Модальное окно
+//Модальное окно header
 
 
 //Слайдер Range
@@ -163,6 +130,10 @@ noUiSlider.create(slider, {
     }
 });
 //Слайдер Range
+
+//Модальное окно фильтр моб.
+
+//Модальное окно фильтр моб.
 
 
 
