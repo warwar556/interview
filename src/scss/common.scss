@@ -234,8 +234,6 @@ body {
 	}
 }
 
-
-
 .swiper {
 	width: 100%;
 	height: 726px;
@@ -305,7 +303,6 @@ body {
 .swiper-pagination-bullet-active {
 	background-color: $gray !important;
 }
-
 //=======Главная страница======//=======================================
 
 //Блок Комфортный экстрим по России//
@@ -340,7 +337,6 @@ body {
 			height: 391px;
 		}
 	}
-	
 
 	&__logo {
 		padding-bottom: 112px;
@@ -611,10 +607,6 @@ body {
 	padding: 18px 20px 20px;
 	background-color: $white;
 
-	//&_active {
-	//	display: block;
-	//}
-
 	&__container {
 		display: flex;
 		flex-direction: row;
@@ -752,7 +744,6 @@ body {
 		overflow-y: auto;
 	}
 }
-
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -1072,11 +1063,6 @@ input[type=number] {
 //Блок Сплав по Катуни//
 
 //Блок Карта//
-
-
-
-
-
 .map {
 	width: 100%;
 	height: 684px;
@@ -1119,7 +1105,6 @@ input[type=number] {
 		background-color: $gray-2;
 		position: relative;
 
-
 		@media (max-width: 1439px) {
 			background-size: 629px 319px;
 			background-position: left 0px bottom 0px;
@@ -1156,7 +1141,7 @@ input[type=number] {
 
 			@media (max-width: 1439px) {
 				top: 248px;
-    			left: 285px;
+				left: 285px;
 			}
 		}
 
@@ -1227,7 +1212,7 @@ input[type=number] {
 
 					@media (max-width: 1439px) {
 						top: -183px;
-    					left: -130px;
+						left: -130px;
 					}
 				}
 
@@ -1286,8 +1271,6 @@ input[type=number] {
 		}
 	}
 }
- 
-
 
 .simplebar-scrollbar {
 	height: 95px !important;
@@ -1302,167 +1285,6 @@ input[type=number] {
 .simplebar-scrollbar:before {
 	background-color: $orange !important;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//.map {
- 
-//	width: 100%;
-//	height: 664px;
-//	position: relative;
-//	overflow: scroll;
-
-//	@media (max-width: 1439px) {
-//		height: 584px;
-//	}
-
-//	&__inner {
-//		position: relative;
-//		background-image: url(../images/content/map.png);
-//		background-repeat: no-repeat;
-//		background-color: $gray-2;
-//		width: 1227px;
-//		height: 664px;
-
-//		@media (max-width: 1439px) {
-//			height: 584px;
-//			background-size: cover;
-//		}
-//	}
-
-//	&__point {
-//		position: absolute;
-
-//		&-position-1 {
-//			top: 350px;
-//			left: 750px;
-//		}
-
-//		&-position-2 {
-//			top: 230px;
-//			left: 250px;
-//		}
-
-//		&-image {
-//			width: 27px;
-//			height: 35px;
-//			min-width: 27px;
-//		}
-
-//		&-image {
-//			display: flex;
-//			flex-direction: column;
-//			align-items: center;
-//			cursor: pointer;
-//		}
-
-//		&-description {
-//			width: 340px;
-//			height: 40px;
-//			padding: 0 14px 0 21px;
-//			background-color: $gray-2;
-//			border: 1px solid $orange;
-//			box-sizing: border-box;
-//			border-radius: 15px;
-//			display: flex;
-//			flex-direction: row;
-//			align-items: center;
-//			justify-content: space-between;	
-//			position: absolute;
-
-//			&_rel {
-//				position: relative;
-//			}
-
-//			&-big {
-//				width: 380px;
-//				min-width: 294px;
-//				height: 236px;
-//				background: $white;
-//				border: 1px solid $orange;
-//				box-sizing: border-box;
-//				border-radius: 15px;
-//				padding: 9px 10px 9px 14px;
-
-//				&_right {
-//					position: absolute;
-//					top: -200px;
-//					left: 30px;
-//				}
-
-//				&_left {
-//					position: absolute;
-//					top: -200px;
-//					left: -385px;
-//				}
-//			}
-
-//			&-container {
-//				display: none;
-
-//				&_active {
-//					display: block;
-//				}
-//			}
-
-//			&_right {
-//				top: -5px;
-//				left: 35px;
-//			}
-
-//			&_left {
-//				top: -5px;
-//				left: -345px;
-//			}
-			
-//			&-title {
-
-//			}
-
-//			&-hr {
-//				width: 100%;
-//				height: 1px;
-//				background-color: rgba(0, 0, 0, 0.510417);
-//			}
-//		}
-//	}
-
-//	&__arrows {
-//		display: none;
-//		position: absolute;
-//		bottom: 0;
-//		left: 0;
-//		margin: 0 0 7px 25px;
-
-//		@media (max-width: 1439px) {
-//			display: block;
-//		}
-
-//		&-image {
-//			width: 68px;
-//			height: 20px;
-//			min-width: 68px;
-//		}
-//	}
-//}
 //Блок Карта//
 
 
@@ -2001,9 +1823,8 @@ input[type=number] {
 		}
 	}
 }
-
-
 //Блок Что взять с собой://
+
 
 //Блок Бронируйте ваш тур мечты//
 .reserve {
@@ -2301,113 +2122,6 @@ input[type=number] {
 	justify-content: space-between;
 }
 
-
-
-
-//.select-box {
-//	display: flex;
-//	width: 160px;
-//	flex-direction: column;
-//	position: relative;
-//	margin-right: 20px;
-
-//	@media (max-width: 1439px) {
-//		width: 100%;
-//		margin-right: 0;
-//	}
-
-//	&_size {
-//		width: 190px;
-//	}
-
-//	&_dn-m {
-//		@media (max-width: 1439px) {
-//			display: none;
-//		}
-//	}
-//}
-
-//.select-box .checkbox-container {
-//	background: $white;
-//	max-height: 0;
-//	width: 100%;
-//	opacity: 0;
-//	transition: all 0.4s;
-//	border-radius: 5px;
-//	overflow: hidden;
-//	border: 1px solid $gray;
-//	order: 1;
-//	font-size: 16px;
-//    line-height: 16px;
-//    font-weight: 500;
-//    font-family: $fontFamily-Medium;
-//    font-style: normal;
-//    color: $gray;
-//}
-
-//.selected {
-//	background: $white;
-//	border: 1px solid $gray;
-//	border-radius: 5px;
-//	font-size: 16px;
-//    line-height: 16px;
-//    font-weight: 500;
-//    font-family: $fontFamily-Medium;
-//    font-style: normal;
-//    color: $gray;
-//	position: relative;
-//	order: 0;
-//}
-
-//.selected::after {
-//	content: "";
-//	background: url(../images/content/arrow-down.svg);
-//	background-size: contain;
-//	background-repeat: no-repeat;
-//	position: absolute;
-//	height: 100%;
-//	width: 12px;
-//	right: 9px;
-//	top: 10px;
-//	transition: all 0.4s;
-//	overflow-y: auto;
-//}
-
-//.select-box .checkbox-container.active {
-//	max-height: 128px;
-//	opacity: 1;
-//}
-
-//.select-box .checkbox-container.active + .selected::after {
-//	transform: rotateX(180deg);
-//	top: -9px;
-//}
-
-//.select-box .checkbox-container::-webkit-scrollbar {
-//	width: 5px;
-//	background: $white;
-//	border-radius: 0 5px 5px 0;
-//}
-
-//.select-box .checkbox-container::-webkit-scrollbar-thumb {
-//	background: $gray;
-//	border-radius: 5px;
-//}
-
-//.select-box .selected {
-//	padding: 6px 19px;
-//	cursor: pointer;
-//}
-
-//.select-box label {
-//	cursor: pointer;
-//}
-
-//.select-box .option .radio {
-//	display: none;
-//}
-
-
 .checkbox {
 
 	&__filter {
@@ -2466,9 +2180,6 @@ input[type=number] {
 	cursor: pointer;
 
 	@media (max-width: 1439px) {
-		//width: 100%;
-		//min-width: 100%;
-		//margin-right: 0;
 		display: none;
 	}
 
@@ -2525,7 +2236,6 @@ input[type=number] {
 	}
 }
 
-
 .popover .select-box .popover_visible + .popover::after {
 	transform: rotateX(180deg);
 	top: -9px;
@@ -2534,5 +2244,3 @@ input[type=number] {
 .popover_visible .popover__content {
 	display: block;
 }
-
- 
