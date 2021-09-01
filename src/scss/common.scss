@@ -1116,7 +1116,7 @@ input[type=number] {
 			@media (max-width: 1439px) {
 				width: 1271px;
 				height: 588px;
-				background-size: 1271px 644px;
+				background-size: 1271px 588px;
 				background-position: left 0px top 0px;
 			}
 		}
@@ -1136,7 +1136,7 @@ input[type=number] {
 		}
 
 		&-position-2 {
-			top: 161px;
+			top: 239px;
 			left: 372px;
 
 			@media (max-width: 1439px) {
@@ -1207,7 +1207,7 @@ input[type=number] {
 
 				&_right {
 					position: absolute;
-					top: -200px;
+					top: -236px;
 					left: 30px;
 
 					@media (max-width: 1439px) {
@@ -1218,8 +1218,13 @@ input[type=number] {
 
 				&_left {
 					position: absolute;
-					top: -200px;
+					top: -236px;
 					left: -385px;
+
+					@media (max-width: 1439px) {
+						top: -183px;
+						left: -135px;
+					}
 				}
 			}
 
